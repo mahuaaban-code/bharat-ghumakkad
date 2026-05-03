@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#FAF7F0; padding:24px; font-family:'Hind',sans-serif; }
+.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:16px; }
+.motif { background:#F0EAD6; border-radius:6px; padding:14px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.motif svg { display:block; }
+.name { font-size:9px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8C6E57; text-align:center; }
+.border-strip { height:28px; width:100%; border-radius:4px; overflow:hidden; }
+.label { font-size:9px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#8C6E57; margin-bottom:8px; }
+</style></head>
+<body>
+
+<div class="label">Bhil / Pithora Tribal Motifs — Jhabua, Madhya Pradesh</div>
+
+<div class="grid">
+
+  <!-- Dot cluster -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <!-- Dense dot field — signature Bhil style -->
+      <g fill="#C0392B">
+        <circle cx="8" cy="8" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="28" cy="8" r="2.5"/><circle cx="38" cy="8" r="2.5"/><circle cx="48" cy="8" r="2.5"/>
+        <circle cx="13" cy="16" r="2.5"/><circle cx="23" cy="16" r="2.5"/><circle cx="33" cy="16" r="2.5"/><circle cx="43" cy="16" r="2.5"/>
+        <circle cx="8" cy="24" r="2.5"/><circle cx="18" cy="24" r="2.5"/><circle cx="28" cy="24" r="2.5"/><circle cx="38" cy="24" r="2.5"/><circle cx="48" cy="24" r="2.5"/>
+        <circle cx="13" cy="32" r="2.5"/><circle cx="23" cy="32" r="2.5"/><circle cx="33" cy="32" r="2.5"/><circle cx="43" cy="32" r="2.5"/>
+        <circle cx="8" cy="40" r="2.5"/><circle cx="18" cy="40" r="2.5"/><circle cx="28" cy="40" r="2.5"/><circle cx="38" cy="40" r="2.5"/><circle cx="48" cy="40" r="2.5"/>
+        <circle cx="13" cy="48" r="2.5"/><circle cx="23" cy="48" r="2.5"/><circle cx="33" cy="48" r="2.5"/><circle cx="43" cy="48" r="2.5"/>
+      </g>
+    </svg>
+    <div class="name">Dot Field</div>
+  </div>
+
+  <!-- Pithora horse -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <!-- Simple stylized Pithora horse -->
+      <g fill="#C0392B" stroke="none">
+        <!-- body -->
+        <rect x="14" y="22" width="22" height="12" rx="4"/>
+        <!-- neck -->
+        <rect x="32" y="14" width="8" height="14" rx="3"/>
+        <!-- head -->
+        <rect x="36" y="10" width="10" height="8" rx="3"/>
+        <!-- legs -->
+        <rect x="15" y="33" width="4" height="12" rx="2"/>
+        <rect x="21" y="33" width="4" height="12" rx="2"/>
+        <rect x="27" y="33" width="4" height="10" rx="2"/>
+        <rect x="33" y="33" width="4" height="10" rx="2"/>
+        <!-- tail -->
+        <path d="M14 28 Q6 22 8 16" stroke="#C0392B" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- eye -->
+        <circle cx="43" cy="13" r="1.5" fill="#F5EDD6"/>
+        <!-- dots on body -->
+        <circle cx="19" cy="27" r="1.5" fill="#F5EDD6"/>
+        <circle cx="25" cy="27" r="1.5" fill="#F5EDD6"/>
+        <circle cx="31" cy="27" r="1.5" fill="#F5EDD6"/>
+      </g>
+    </svg>
+    <div class="name">Pithora Horse</div>
+  </div>
+
+  <!-- Concentric diamonds -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <g fill="none" stroke-width="2">
+        <polygon points="28,6 50,28 28,50 6,28" stroke="#3A7D44"/>
+        <polygon points="28,12 44,28 28,44 12,28" stroke="#D4800A"/>
+        <polygon points="28,18 38,28 28,38 18,28" stroke="#C0392B"/>
+        <polygon points="28,22 34,28 28,34 22,28" stroke="#3A7D44"/>
+      </g>
+      <circle cx="28" cy="28" r="3" fill="#C0392B"/>
+    </svg>
+    <div class="name">Concentric Diamond</div>
+  </div>
+
+  <!-- Sun motif -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <circle cx="28" cy="28" r="10" fill="#D4800A"/>
+      <circle cx="28" cy="28" r="6" fill="#F5EDD6"/>
+      <circle cx="28" cy="28" r="3" fill="#D4800A"/>
+      <!-- rays -->
+      <g stroke="#D4800A" stroke-width="2.5" stroke-linecap="round">
+        <line x1="28" y1="6" x2="28" y2="12"/>
+        <line x1="28" y1="44" x2="28" y2="50"/>
+        <line x1="6" y1="28" x2="12" y2="28"/>
+        <line x1="44" y1="28" x2="50" y2="28"/>
+        <line x1="12" y1="12" x2="16" y2="16"/>
+        <line x1="40" y1="40" x2="44" y2="44"/>
+        <line x1="44" y1="12" x2="40" y2="16"/>
+        <line x1="12" y1="44" x2="16" y2="40"/>
+      </g>
+    </svg>
+    <div class="name">Sun (Surya)</div>
+  </div>
+
+  <!-- Zigzag border -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <g stroke="#C0392B" stroke-width="2.5" fill="none" stroke-linejoin="round">
+        <polyline points="0,14 7,7 14,14 21,7 28,14 35,7 42,14 49,7 56,14"/>
+        <polyline points="0,28 7,21 14,28 21,21 28,28 35,21 42,28 49,21 56,28"/>
+        <polyline points="0,42 7,35 14,42 21,35 28,42 35,35 42,42 49,35 56,42"/>
+      </g>
+    </svg>
+    <div class="name">Zigzag (Lakir)</div>
+  </div>
+
+  <!-- Step well -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <g fill="none" stroke="#3A7D44" stroke-width="2">
+        <rect x="4" y="4" width="48" height="48"/>
+        <rect x="10" y="10" width="36" height="36"/>
+        <rect x="16" y="16" width="24" height="24"/>
+        <rect x="22" y="22" width="12" height="12"/>
+        <rect x="26" y="26" width="4" height="4" fill="#3A7D44"/>
+      </g>
+    </svg>
+    <div class="name">Step Well (Bowri)</div>
+  </div>
+
+  <!-- Fish scale / leaf repeat -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <g fill="none" stroke="#C0392B" stroke-width="1.8">
+        <ellipse cx="14" cy="8" rx="7" ry="10"/>
+        <ellipse cx="28" cy="8" rx="7" ry="10"/>
+        <ellipse cx="42" cy="8" rx="7" ry="10"/>
+        <ellipse cx="7" cy="22" rx="7" ry="10"/>
+        <ellipse cx="21" cy="22" rx="7" ry="10"/>
+        <ellipse cx="35" cy="22" rx="7" ry="10"/>
+        <ellipse cx="49" cy="22" rx="7" ry="10"/>
+        <ellipse cx="14" cy="36" rx="7" ry="10"/>
+        <ellipse cx="28" cy="36" rx="7" ry="10"/>
+        <ellipse cx="42" cy="36" rx="7" ry="10"/>
+        <ellipse cx="7" cy="50" rx="7" ry="10"/>
+        <ellipse cx="21" cy="50" rx="7" ry="10"/>
+        <ellipse cx="35" cy="50" rx="7" ry="10"/>
+        <ellipse cx="49" cy="50" rx="7" ry="10"/>
+      </g>
+    </svg>
+    <div class="name">Leaf Scale</div>
+  </div>
+
+  <!-- Cross / star motif -->
+  <div class="motif">
+    <svg width="56" height="56" viewBox="0 0 56 56">
+      <rect width="56" height="56" fill="#F5EDD6"/>
+      <!-- 4x4 grid of cross motifs -->
+      <g fill="#D4800A">
+        <g transform="translate(8,8)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(22,8)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(36,8)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(50,8)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(8,22)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(22,22)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(36,22)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(50,22)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(8,36)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(22,36)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(36,36)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(50,36)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(8,50)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(22,50)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(36,50)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+        <g transform="translate(50,50)">
+          <rect x="-1" y="-5" width="2" height="10"/>
+          <rect x="-5" y="-1" width="10" height="2"/>
+          <circle cx="0" cy="0" r="2"/>
+        </g>
+      </g>
+    </svg>
+    <div class="name">Cross/Star Grid</div>
+  </div>
+
+</div>
+
+<!-- Border divider strip -->
+<div class="label" style="margin-bottom:8px;">Decorative Divider Borders</div>
+<svg width="100%" height="20" viewBox="0 0 660 20" preserveAspectRatio="xMidYMid meet" style="display:block;margin-bottom:8px;">
+  <rect width="660" height="20" fill="#F0EAD6"/>
+  <polyline points="0,10 10,2 20,10 30,2 40,10 50,2 60,10 70,2 80,10 90,2 100,10 110,2 120,10 130,2 140,10 150,2 160,10 170,2 180,10 190,2 200,10 210,2 220,10 230,2 240,10 250,2 260,10 270,2 280,10 290,2 300,10 310,2 320,10 330,2 340,10 350,2 360,10 370,2 380,10 390,2 400,10 410,2 420,10 430,2 440,10 450,2 460,10 470,2 480,10 490,2 500,10 510,2 520,10 530,2 540,10 550,2 560,10 570,2 580,10 590,2 600,10 610,2 620,10 630,2 640,10 650,2 660,10" stroke="#C0392B" stroke-width="2" fill="none"/>
+  <polyline points="0,16 10,8 20,16 30,8 40,16 50,8 60,16 70,8 80,16 90,8 100,16 110,8 120,16 130,8 140,16 150,8 160,16 170,8 180,16 190,8 200,16 210,8 220,16 230,8 240,16 250,8 260,16 270,8 280,16 290,8 300,16 310,8 320,16 330,8 340,16 350,8 360,16 370,8 380,16 390,8 400,16 410,8 420,16 430,8 440,16 450,8 460,16 470,8 480,16 490,8 500,16 510,8 520,16 530,8 540,16 550,8 560,16 570,8 580,16 590,8 600,16 610,8 620,16 630,8 640,16 650,8 660,16" stroke="#3A7D44" stroke-width="2" fill="none"/>
+</svg>
+
+<svg width="100%" height="16" viewBox="0 0 660 16" preserveAspectRatio="xMidYMid meet" style="display:block;">
+  <rect width="660" height="16" fill="#F0EAD6"/>
+  <g fill="#D4800A">
+    <polygon points="5,8 10,2 15,8 10,14"/><polygon points="19,8 24,2 29,8 24,14"/>
+    <polygon points="33,8 38,2 43,8 38,14"/><polygon points="47,8 52,2 57,8 52,14"/>
+    <polygon points="61,8 66,2 71,8 66,14"/><polygon points="75,8 80,2 85,8 80,14"/>
+    <polygon points="89,8 94,2 99,8 94,14"/><polygon points="103,8 108,2 113,8 108,14"/>
+    <polygon points="117,8 122,2 127,8 122,14"/><polygon points="131,8 136,2 141,8 136,14"/>
+    <polygon points="145,8 150,2 155,8 150,14"/><polygon points="159,8 164,2 169,8 164,14"/>
+    <polygon points="173,8 178,2 183,8 178,14"/><polygon points="187,8 192,2 197,8 192,14"/>
+    <polygon points="201,8 206,2 211,8 206,14"/><polygon points="215,8 220,2 225,8 220,14"/>
+    <polygon points="229,8 234,2 239,8 234,14"/><polygon points="243,8 248,2 253,8 248,14"/>
+    <polygon points="257,8 262,2 267,8 262,14"/><polygon points="271,8 276,2 281,8 276,14"/>
+    <polygon points="285,8 290,2 295,8 290,14"/><polygon points="299,8 304,2 309,8 304,14"/>
+    <polygon points="313,8 318,2 323,8 318,14"/><polygon points="327,8 332,2 337,8 332,14"/>
+    <polygon points="341,8 346,2 351,8 346,14"/><polygon points="355,8 360,2 365,8 360,14"/>
+    <polygon points="369,8 374,2 379,8 374,14"/><polygon points="383,8 388,2 393,8 388,14"/>
+    <polygon points="397,8 402,2 407,8 402,14"/><polygon points="411,8 416,2 421,8 416,14"/>
+    <polygon points="425,8 430,2 435,8 430,14"/><polygon points="439,8 444,2 449,8 444,14"/>
+    <polygon points="453,8 458,2 463,8 458,14"/><polygon points="467,8 472,2 477,8 472,14"/>
+    <polygon points="481,8 486,2 491,8 486,14"/><polygon points="495,8 500,2 505,8 500,14"/>
+    <polygon points="509,8 514,2 519,8 514,14"/><polygon points="523,8 528,2 533,8 528,14"/>
+    <polygon points="537,8 542,2 547,8 542,14"/><polygon points="551,8 556,2 561,8 556,14"/>
+    <polygon points="565,8 570,2 575,8 570,14"/><polygon points="579,8 584,2 589,8 584,14"/>
+    <polygon points="593,8 598,2 603,8 598,14"/><polygon points="607,8 612,2 617,8 612,14"/>
+    <polygon points="621,8 626,2 631,8 626,14"/><polygon points="635,8 640,2 645,8 640,14"/>
+    <polygon points="649,8 654,2 659,8 654,14"/>
+  </g>
+</svg>
+
+</body></html>
