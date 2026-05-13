@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Knowledge System — Bharat Ghumakkad Samaj Darshan Foundation</title>
+<meta name="description" content="परंपरागत ज्ञान का अनुसंधान और संरक्षण — Bharat Ghumakkad Foundation, Jhabua"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --green:#3A6B45;--greenDk:#264D30;--greenLt:#7A9E7E;
+    --terra:#B85C38;--terraDk:#8C3A1E;--amber:#C8960A;--amberLt:#D4A830;
+    --bark:#4A2510;--cream:#FAF7F0;--creamDk:#F0EAD6;--paper:#E8DFC8;
+    --textPri:#2C1A0E;--textSec:#5C3D28;--textMuted:#8C6E57;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Hind',sans-serif;color:var(--textPri);background:var(--creamDk);line-height:1.65;overflow-x:hidden;}
+  .hindi{font-family:'Tiro Devanagari Hindi',serif;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+
+  /* Nav */
+  header.nav-wrap{position:sticky;top:0;z-index:200;background:var(--cream);border-bottom:1px solid rgba(74,37,16,0.12);}
+  header.nav-wrap.scrolled{box-shadow:0 2px 16px rgba(74,37,16,0.10);}
+  .nav-strip{height:3px;background:linear-gradient(90deg,var(--green),var(--amber),var(--terra));}
+  .main-nav{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:12px;cursor:pointer;}
+  .brand-mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center;}
+  .brand-mark img{width:38px;height:38px;object-fit:contain;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-name{font-family:'Tiro Devanagari Hindi',serif;font-size:1rem;font-weight:400;color:var(--bark);}
+  .brand-sub{font-family:'Hind',sans-serif;font-size:0.62rem;color:var(--textMuted);font-weight:600;letter-spacing:0.14em;text-transform:uppercase;margin-top:2px;}
+  .nav-links{list-style:none;display:flex;align-items:center;gap:4px;}
+  .nav-item{font-size:0.82rem;font-weight:500;padding:7px 11px;border-radius:4px;color:var(--textSec);transition:all 0.18s;display:flex;flex-direction:column;align-items:center;}
+  .nav-item .hin{font-family:'Tiro Devanagari Hindi',serif;font-size:0.62rem;color:var(--textMuted);font-weight:400;margin-top:1px;}
+  .nav-item:hover,.nav-item.active{color:var(--green);background:rgba(58,107,69,0.07);}
+  .nav-cta{background:var(--terra);color:var(--cream)!important;padding:7px 18px;border-radius:4px;font-size:0.82rem;font-weight:600;transition:opacity 0.2s;}
+  .nav-cta:hover{opacity:0.88;}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--bark);padding:6px;}
+
+  /* Hero */
+  .work-hero{position:relative;min-height:420px;display:flex;align-items:center;padding:80px 24px;color:var(--cream);overflow:hidden;}
+  .work-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+  .work-hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(38,77,48,0.92) 0%,rgba(38,77,48,0.75) 50%,rgba(0,0,0,0.3) 100%);}
+  .work-hero-inner{max-width:800px;margin:0 auto;position:relative;z-index:1;}
+  .breadcrumb{font-size:0.78rem;color:rgba(250,247,240,0.65);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:rgba(250,247,240,0.65);transition:color 0.2s;}
+  .breadcrumb a:hover{color:var(--amberLt);}
+  .work-tag{font-size:0.74rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--amberLt);margin-bottom:12px;}
+  .work-hero h1{font-family:'Tiro Devanagari Hindi',serif;font-weight:400;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.2;margin-bottom:14px;}
+  .work-hero-sub{font-size:1rem;color:rgba(250,247,240,0.80);max-width:580px;line-height:1.65;}
+
+  /* Container */
+  .container{max-width:1100px;margin:0 auto;padding:0 24px;}
+  section{padding:64px 24px;}
+
+  /* Overview */
+  .overview-section{background:var(--cream);}
+  .overview-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start;max-width:1100px;margin:0 auto;}
+  .overview-label{font-size:0.74rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:10px;}
+  .overview-title{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:400;line-height:1.3;margin-bottom:20px;color:var(--bark);}
+  .overview-text{font-size:1rem;line-height:1.80;color:var(--textSec);}
+  .overview-img{border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(74,37,16,0.15);aspect-ratio:4/3;}
+  .overview-img img{width:100%;height:100%;object-fit:cover;}
+
+  /* Impact Bar */
+  .impact-bar{background:var(--greenDk);padding:32px 24px;}
+  .impact-bar-inner{max-width:800px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:20px;}
+  .impact-item{text-align:center;}
+  .impact-num{font-family:'Tiro Devanagari Hindi',serif;font-size:2rem;font-weight:700;color:var(--amberLt);}
+  .impact-en{font-size:0.80rem;font-weight:600;color:rgba(250,247,240,0.85);margin-top:4px;}
+  .impact-hi{font-family:'Tiro Devanagari Hindi',serif;font-size:0.75rem;color:rgba(250,247,240,0.55);margin-top:2px;}
+
+  /* Activities */
+  .activities-section{background:var(--creamDk);}
+  .section-eyebrow{font-size:0.74rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:8px;}
+  .section-title{font-family:'Tiro Devanagari Hindi',serif;font-weight:400;font-size:clamp(1.5rem,3vw,2rem);line-height:1.3;margin-bottom:8px;color:var(--bark);}
+  .section-sub{font-size:0.95rem;color:var(--textMuted);margin-bottom:40px;}
+  .section-head{margin-bottom:40px;}
+  .activities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto;}
+  .activity-card{background:var(--cream);border:1px solid rgba(74,37,16,0.10);border-radius:12px;padding:28px;transition:transform 0.2s,box-shadow 0.2s;}
+  .activity-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(74,37,16,0.12);}
+  .activity-icon{font-size:2.2rem;margin-bottom:14px;}
+  .activity-name{font-weight:700;font-size:0.95rem;color:var(--textPri);margin-bottom:8px;}
+  .activity-desc{font-size:0.88rem;color:var(--textSec);line-height:1.65;}
+
+  /* Gallery */
+  .gallery-section{background:var(--paper);}
+  .gallery-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:0 auto;}
+  .gallery-item{border-radius:10px;overflow:hidden;aspect-ratio:4/3;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;}
+  .gallery-item:hover img{transform:scale(1.05);}
+
+  /* CTA */
+  .cta-section{background:var(--green);padding:64px 24px;text-align:center;color:var(--cream);}
+  .cta-title{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:400;margin-bottom:12px;}
+  .cta-sub{font-size:0.95rem;color:rgba(250,247,240,0.80);margin-bottom:28px;}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:4px;font-family:'Hind',sans-serif;font-weight:600;font-size:0.85rem;letter-spacing:0.04em;border:none;cursor:pointer;transition:opacity 0.2s,transform 0.15s;text-decoration:none;}
+  .btn:hover{opacity:0.88;transform:translateY(-1px);}
+  .btn-amber{background:var(--amber);color:var(--bark);font-weight:700;}
+  .btn-ghost-w{background:transparent;color:var(--cream);border:2px solid rgba(250,247,240,0.5);padding:9px 22px;}
+  .btn-outline-w{background:transparent;color:var(--cream);border:2px solid rgba(250,247,240,0.4);padding:9px 22px;}
+
+  /* Footer */
+  .site-footer{background:var(--bark);color:var(--cream);padding:48px 24px 0;}
+  .footer-brand-hi{font-family:'Tiro Devanagari Hindi',serif;font-size:0.80rem;color:rgba(250,247,240,0.55);margin-top:2px;}
+  .footer-blurb{font-size:0.82rem;color:rgba(250,247,240,0.60);line-height:1.65;margin-top:10px;}
+  .footer-grid h4{font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--amberLt);margin-bottom:14px;}
+  .footer-grid a{display:block;font-size:0.83rem;color:rgba(250,247,240,0.68);margin-bottom:8px;transition:color 0.2s;}
+  .footer-grid a:hover{color:var(--amberLt);}
+  .footer-bottom{border-top:1px solid rgba(250,247,240,0.12);max-width:1100px;margin:0 auto;padding:16px 0;display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;color:rgba(250,247,240,0.45);}
+
+  /* Responsive */
+  @media(max-width:1024px){
+    .menu-toggle{display:block;}
+    .nav-links{display:none;position:absolute;top:67px;left:0;right:0;flex-direction:column;background:var(--cream);padding:18px 24px;gap:14px;box-shadow:0 8px 18px rgba(0,0,0,0.08);align-items:stretch;z-index:100;}
+    .nav-links.open{display:flex;}
+    .nav-dropdown{display:none;position:static;box-shadow:none;border:none;background:#f5f0e8;padding:2px 0 2px 10px;}
+    .has-dropdown.mob-open > .nav-dropdown{display:block;}
+    .nav-links .nav-cta{width:fit-content;}
+  }
+  @media(max-width:768px){
+    .overview-grid{grid-template-columns:1fr;gap:32px;}
+    .activities-grid{grid-template-columns:1fr 1fr;}
+    .gallery-row{grid-template-columns:1fr 1fr;}
+    .impact-bar-inner{gap:28px;}
+  }
+  @media(max-width:480px){
+    section{padding:40px 16px;}
+    .work-hero{min-height:360px;padding:60px 16px;}
+    .activities-grid{grid-template-columns:1fr;}
+    .gallery-row{grid-template-columns:1fr 1fr;}
+    .cta-btns{flex-direction:column;align-items:center;}
+    .footer-bottom{flex-direction:column;gap:6px;text-align:center;}
+  }
+
+  /* === Dropdown Nav === */
+  .nav-links li { position:relative; }
+  .nav-dropdown { display:none; position:absolute; top:100%; left:0; background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,.12); min-width:210px; z-index:200; padding:6px 0; }
+  .nav-links li:hover > .nav-dropdown { display:block; animation:fadeDown .18s ease; }
+  @keyframes fadeDown { from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:translateY(0)} }
+  .nav-dropdown a { display:block; padding:9px 16px; font-size:.83rem; color:#333 !important; white-space:nowrap; text-decoration:none; }
+  .nav-dropdown a:hover { background:var(--cream); color:var(--terra) !important; }
+  .has-dropdown > a.nav-item::after { content:""; }
+
+  /* ====== Nav ====== */
+  header.nav-wrap { position:sticky; top:0; z-index:200; background:var(--cream); border-bottom:1px solid rgba(74,37,16,0.12); transition:box-shadow 0.3s, background 0.3s; }
+  header.nav-wrap.scrolled { background:rgba(250,247,240,0.97); box-shadow:0 2px 12px rgba(74,37,16,0.10); }
+  .nav-strip { height:3px; background:linear-gradient(90deg, var(--green), var(--amber), var(--terra), var(--green)); }
+  nav.main-nav { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .brand { display:flex; align-items:center; gap:12px; cursor:pointer; }
+  .brand-mark { width:50px; height:50px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+  .brand-mark img { width:50px; height:50px; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(74,37,16,0.20)); }
+  .brand-text { display:flex; flex-direction:column; line-height:1.1; }
+  .brand-name { font-family:'Vesper Libre', serif; font-weight:700; font-size:1.05rem; color:var(--greenDk); letter-spacing:0.01em; }
+  .brand-sub { font-size:0.68rem; color:var(--textMuted,#8C6E57); font-weight:600; letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+  .nav-links { display:flex; gap:4px; align-items:center; list-style:none; }
+  .nav-links a.nav-item { display:inline-flex; flex-direction:column; align-items:center; padding:8px 12px; font-size:0.86rem; font-weight:500; color:var(--textSec,#5C3D28); border-bottom:2px solid transparent; border-radius:4px 4px 0 0; transition:color 0.2s, border-color 0.2s; }
+  .nav-links a.nav-item:hover { color:var(--terra); }
+  .nav-links a.nav-item.active { color:var(--terra); border-bottom-color:var(--amber); font-weight:600; }
+  .nav-links li { position:relative; }
+  .nav-dropdown { display:none; position:absolute; top:100%; left:0; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:8px; box-shadow:0 8px 28px rgba(0,0,0,0.12); min-width:220px; z-index:200; padding:8px 0; animation:fadeDown 0.18s ease; }
+  @keyframes fadeDown { from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:translateY(0)} }
+  .nav-links li:hover > .nav-dropdown { display:block; }
+  .nav-dropdown a { display:block; padding:9px 18px; font-size:0.84rem; color:#333; text-decoration:none; white-space:nowrap; transition:background 0.15s, color 0.15s; }
+  .nav-dropdown a:hover { background:var(--cream); color:var(--terra); }
+  .has-dropdown > a.nav-item::after { content:""; }
+  .nav-links a.nav-item .hin { display:block; font-family:'Tiro Devanagari Hindi', serif; font-size:0.62rem; color:var(--textMuted,#8C6E57); margin-top:-2px; font-weight:400; }
+  .nav-cta { margin-left:8px; background:var(--terra); color:var(--cream) !important; padding:7px 18px; border-radius:4px; font-size:0.78rem; font-weight:600; letter-spacing:0.04em; border:none; cursor:pointer; transition:opacity 0.2s; text-decoration:none; }
+  .nav-cta:hover { opacity:0.88; }
+  .menu-toggle { display:none; font-size:1.6rem; background:none; border:none; cursor:pointer; color:var(--textSec,#5C3D28); }
+  @media(max-width:900px) {
+    .menu-toggle { display:block; }
+    .nav-links { display:none; position:absolute; top:67px; left:0; right:0; flex-direction:column; background:var(--cream); padding:18px 24px; gap:14px; box-shadow:0 8px 18px rgba(0,0,0,0.08); align-items:stretch; z-index:100; }
+    .nav-links.open { display:flex; }
+    .nav-links .nav-cta { width:fit-content; }
+    .nav-dropdown { display:none; position:static; box-shadow:none; border:none; border-radius:0; background:#f5f0e8; padding:4px 0 4px 12px; margin-top:4px; }
+    .nav-dropdown a { padding:7px 14px; font-size:0.82rem; }
+    .has-dropdown.mob-open > .nav-dropdown { display:block; }
+    .has-dropdown > a.nav-item::after { content:""; }
+  }
+  </style>
+</head>
+<body>
+
+<header class="nav-wrap" id="navWrap">
+  <div class="nav-strip"></div>
+  <nav class="main-nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img src="images/logo_nav.png" alt="Bharat Ghumakkad logo"></span>
+      <span class="brand-text">
+        <span class="brand-name">Bharat Ghumakkad</span>
+        <span class="brand-sub">Samaj Darshan Foundation</span>
+      </span>
+    </a>
+    <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-item">Home<span class="hin">मुख्य</span></a></li>
+      <li class="has-dropdown">
+        <a href="index.html#work" class="nav-item">Our Work<span class="hin">हमारे आयाम</span></a>
+        <div class="nav-dropdown">
+          <a href="work-tribal-tourism.html">🏕️ Tribal Tourism</a>
+          <a href="work-documentation.html">📷 Documentation</a>
+          <a href="work-environment.html">🌿 Environment</a>
+          <a href="work-education.html">📚 Education</a>
+          <a href="work-tribal-food.html">🌾 Tribal Food</a>
+          <a href="work-knowledge.html">💡 Knowledge System</a>
+          <a href="work-grain-forest.html">🌳 Grain &amp; Forest</a>
+          <a href="work-tribal-art.html">🎨 Tribal Art</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="index.html#traditions" class="nav-item">Traditions<span class="hin">परंपरा</span></a>
+        <div class="nav-dropdown">
+          <a href="tradition-matavan.html">🌿 मातावन</a>
+          <a href="tradition-halma.html">🤝 हलमा</a>
+          <a href="tradition-bhagoria.html">🥁 भगोरिया हाट</a>
+          <a href="tradition-holi.html">🔥 आदिवासी होली</a>
+          <a href="tradition-gal-baba.html">🙏 गल बाबजी</a>
+          <a href="tradition-navai.html">🌾 नवाई</a>
+          <a href="tradition-gauhari.html">🐄 गौहरी</a>
+          <a href="tradition-bharadi.html">🖐️ भराड़ी</a>
+        </div>
+      </li>
+      
+      <li><a href="about.html" class="nav-item">About Us<span class="hin">परिचय</span></a></li>
+      <li><a href="index.html#contact" class="nav-item">Contact<span class="hin">संपर्क</span></a></li>
+      <li><a href="jhabua-samvad.html" class="nav-item">Jhabua Samvad<span class="hin">झाबुआ संवाद</span></a></li>
+      <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="work-hero">
+  <div class="work-hero-bg" style="background-image:url('images/web/card_knowledge.jpg');"></div>
+  <div class="work-hero-overlay"></div>
+  <div class="work-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>›</span>
+      <a href="index.html#work">Our Work</a> <span>›</span>
+      <span style="color:rgba(250,247,240,0.90);">Knowledge System</span>
+    </div>
+    <div class="work-tag">ज्ञान प्रणाली</div>
+    <h1>Knowledge System</h1>
+    <p class="work-hero-sub">वनस्पति विज्ञान, परंपरागत चिकित्सा और पारिस्थितिक ज्ञान</p>
+  </div>
+</section>
+
+<!-- Overview -->
+<section class="overview-section">
+  <div class="overview-grid">
+    <div>
+      <div class="overview-label">हमारा दृष्टिकोण · Our Approach</div>
+      <h2 class="overview-title">परंपरागत ज्ञान का अनुसंधान और संरक्षण</h2>
+      <p class="overview-text">भील और भीलाला समुदाय के पास एक विशाल परंपरागत ज्ञान भंडार है — 500 से अधिक वनस्पतियों की पहचान, उनके औषधीय उपयोग, मौसम की भविष्यवाणी, और पारिस्थितिक संतुलन की गहरी समझ। यह ज्ञान किसी पाठ्यपुस्तक में नहीं — बुजुर्गों की स्मृति में है। Bharat Ghumakkad Foundation इसे संरक्षित और प्रसारित करने का काम करती है।</p>
+      <div style="margin-top:28px;">
+        <a href="index.html#contact" class="btn btn-amber" style="background:#3A6B45; color:#fff;">Get Involved →</a>
+      </div>
+    </div>
+    <div class="overview-img">
+      <img src="images/web/card_knowledge.jpg" alt="Knowledge System">
+    </div>
+  </div>
+</section>
+
+<!-- Impact Bar -->
+<div class="impact-bar">
+  <div class="impact-bar-inner">
+        <div class="impact-item">
+          <div class="impact-num">500+</div>
+          <div class="impact-en">Plants Documented</div>
+          <div class="impact-hi">वनस्पतियां</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-num">60+</div>
+          <div class="impact-en">Healers</div>
+          <div class="impact-hi">वैद्य</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-num">10+</div>
+          <div class="impact-en">Research Papers</div>
+          <div class="impact-hi">शोध पत्र</div>
+        </div>
+  </div>
+</div>
+
+<!-- Activities -->
+<section class="activities-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">मुख्य गतिविधियां · Key Activities</div>
+      <h2 class="section-title">हम क्या करते हैं</h2>
+      <p class="section-sub">इस क्षेत्र में हमारे तीन प्रमुख कार्यक्षेत्र</p>
+    </div>
+    <div class="activities-grid">
+        <div class="activity-card">
+          <div class="activity-icon">🌿</div>
+          <div class="activity-name">Ethnobotany — जातीय वनस्पति</div>
+          <div class="activity-desc">500+ स्थानीय पौधों की पहचान, उपयोग और औषधीय गुणों का दस्तावेज़ीकरण।</div>
+        </div>
+        <div class="activity-card">
+          <div class="activity-icon">🏥</div>
+          <div class="activity-name">Traditional Medicine — परंपरागत चिकित्सा</div>
+          <div class="activity-desc">वैद्यों और जड़ी-बूटी विशेषज्ञों से ज्ञान संग्रह और उसका वैज्ञानिक परीक्षण।</div>
+        </div>
+        <div class="activity-card">
+          <div class="activity-icon">🔬</div>
+          <div class="activity-name">Research Partnerships — शोध साझेदारी</div>
+          <div class="activity-desc">विश्वविद्यालयों और शोध संस्थानों के साथ मिलकर परंपरागत ज्ञान का दस्तावेज़ीकरण।</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">झलकियां · Gallery</div>
+      <h2 class="section-title">ज़मीन पर काम</h2>
+    </div>
+    <div class="gallery-row">
+        <div class="gallery-item"><img src="images/web/card_knowledge.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/web/matavan_baba.jpg" alt="" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/web/tribal_jhabua.jpg" alt="" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-title">इस काम में शामिल हों</div>
+    <p class="cta-sub">दान करें, स्वयंसेवा करें, या हमसे मिलने आएं — हर सहयोग मायने रखता है।</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn btn-amber">💛 Donate Now</a>
+      <a href="index.html#contact" class="btn btn-ghost-w">📞 Contact Us</a>
+      <a href="index.html#work" class="btn btn-outline-w">← Back to All Work</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="tribal-divider alt on-bark"></div>
+  <div class="footer-grid">
+    <div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:4px;">
+        <img src="images/logo_nav.png" alt="Bharat Ghumakkad logo" style="width:48px; height:48px; object-fit:contain; filter:brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg) opacity(0.85);">
+        <div>
+          <div class="footer-brand">Bharat Ghumakkad</div>
+          <div class="footer-brand-hi">भारत घुमक्कड़ समाज दर्शन फाउंडेशन</div>
+        </div>
+      </div>
+      <div class="footer-blurb">
+        Preserving the indigenous knowledge, culture and enterprise of the Bhil and Bhilala communities of Jhabua, Madhya Pradesh.
+        <em>"जनजातीय ज्ञान, प्रकृति और स्वावलंबन की जीवंत यात्रा"</em>
+      </div>
+      <div class="footer-socials">
+        <a class="so" href="https://www.facebook.com/profile.php?id=61575201462354&mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
+        <a class="so" href="https://www.instagram.com/bharat_ghumkkad_jhabua?igsh=bGFyemF5Yzk5cmly&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a class="so" href="https://youtube.com/@rajendradindod01?si=5iSqOUTHFV6mYzJO" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a class="so" href="https://x.com/bharat_ghumkkad?s=21" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="so" href="https://www.linkedin.com/in/झाबुआ-अंचल-b08395341?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a class="so" href="https://bgsdfjhabua.blogspot.com/?m=1" target="_blank" rel="noopener" aria-label="Blog">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.026 0h19.95C23.1 0 24 .9 24 2.026v19.95C24 23.1 23.1 24 21.976 24zM9.457 6.927H6.927a.545.545 0 00-.545.545v2.53c0 .3.244.545.545.545h2.53c.3 0 .545-.244.545-.545v-2.53a.545.545 0 00-.545-.545zm7.616 0h-4.36a.545.545 0 00-.545.545v.909c0 .3.244.545.545.545h4.36c.3 0 .545-.244.545-.545v-.909a.545.545 0 00-.545-.545zm0 3.272h-4.36a.545.545 0 00-.545.545v.909c0 .3.244.545.545.545h4.36c.3 0 .545-.244.545-.545v-.909a.545.545 0 00-.545-.545zm.545 4.91c0-.3-.244-.545-.545-.545H6.927a.545.545 0 00-.545.545v4.364c0 .3.244.545.545.545h10.146c.3 0 .545-.244.545-.545v-4.364z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Our Work</h4>
+      <a href="work-tribal-tourism.html">🏕️ Tribal Tourism</a>
+      <a href="work-environment.html">🌿 Environment</a>
+      <a href="work-education.html">📚 Education</a>
+      <a href="work-tribal-food.html">🌾 Tribal Food</a>
+      <a href="work-documentation.html">📷 Documentation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Events</h4>
+      <a href="jhabua-samvad.html"><strong>Jhabua Samvad</strong></a>
+      <a href="jhabua-samvad.html#schedule">Programme</a>
+      <a href="jhabua-samvad.html#participate">Participate</a>
+      <a href="jhabua-samvad.html#traditions">Traditions</a>
+    </div>
+    <div class="footer-col">
+      <h4>Organisation</h4>
+      <a href="index.html#about">About Us</a>
+      <a href="index.html#support">Support / Donate</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Bharat Ghumakkad Samaj Darshan Foundation · झाबुआ, मध्य प्रदेश</div>
+    <div>Founder: Rajendra Dindod</div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('navWrap');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12), {passive:true});
+  document.querySelectorAll('#navLinks a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+  );
+
+  // Mobile dropdown
+  document.querySelectorAll('.has-dropdown > a.nav-item').forEach(a => {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('mob-open');
+      }
+    });
+  });
+</script>
+<script>
+  const navWrap = document.getElementById('navWrap');
+  if(navWrap) window.addEventListener('scroll', () => navWrap.classList.toggle('scrolled', window.scrollY > 12), {passive:true});
+  document.querySelectorAll('.has-dropdown > a.nav-item').forEach(a => {
+    a.addEventListener('click', e => {
+      if(window.innerWidth <= 900) { e.preventDefault(); a.closest('li').classList.toggle('mob-open'); }
+    });
+  });
+  document.querySelectorAll('#navLinks a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+  );
+</script>
+</body>
+</html>
