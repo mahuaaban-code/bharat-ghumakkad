@@ -122,7 +122,12 @@
   .footer-col a:hover { color:var(--cream); }
   .footer-bottom { max-width:1200px; margin:28px auto 0; padding:16px 24px; border-top:1px solid rgba(250,247,240,0.10); display:flex; justify-content:space-between; align-items:center; font-size:0.72rem; color:rgba(250,247,240,0.40); flex-wrap:wrap; gap:10px; }
   @media(max-width:768px) { .footer-grid { grid-template-columns:1fr 1fr; } }
-  @media(max-width:480px) { .footer-grid { grid-template-columns:1fr; } }
+  @media(max-width:480px) {
+    .footer-grid { grid-template-columns:1fr; }
+    .brand-sub{display:none;}
+    .brand-name{font-size:0.92rem;}
+    .menu-toggle{font-size:1.4rem;}
+  }
   </style>
 </head>
 <body>

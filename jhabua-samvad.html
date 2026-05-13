@@ -604,6 +604,16 @@
     .day-tabs { flex-direction:column; }
     .part-grid { grid-template-columns:1fr; }
   }
+  @media (max-width:480px) {
+    section.std { padding:44px 14px; }
+    .brand-sub { display:none; }
+    .brand-name { font-size:0.92rem; }
+    .menu-toggle { font-size:1.4rem; }
+    .hero-eyebrow { font-size:0.66rem; }
+    .hero-title { font-size:clamp(1.6rem, 6vw, 2.2rem); }
+    .central-idea { width:200px; height:200px; }
+  }
+
 
   /* ====== Design-system motif backgrounds ====== */
   /* Each content section uses the matching js_page slide image
