@@ -2,6 +2,10 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bharat Ghumakkad Samaj Darshan Foundation — Jhabua</title>
 <meta name="description" content="Bharat Ghumakkad Samaj Darshan Foundation — Preserving tribal wisdom, culture and self-reliance of the Bhil and Bhilala communities of Jhabua, Madhya Pradesh." />
@@ -52,7 +56,7 @@
   }
   .nav-strip {
     height:3px;
-    background:linear-gradient(90deg, var(--green), var(--amber), var(--terra), var(--green));
+    background:linear-gradient(90deg, var(--terraDk), var(--amber), var(--terra), var(--amber), var(--terraDk));
   }
   nav.main-nav {
     max-width:1200px; margin:0 auto;
@@ -71,7 +75,7 @@
     filter:drop-shadow(0 2px 6px rgba(74,37,16,0.20));
   }
   .brand-text { display:flex; flex-direction:column; line-height:1.1; }
-  .brand-name { font-family:'Vesper Libre', serif; font-weight:700; font-size:1.05rem; color:var(--greenDk); letter-spacing:0.01em; }
+  .brand-name { font-family:'Vesper Libre', serif; font-weight:700; font-size:1.05rem; color:var(--terraDk); letter-spacing:0.01em; }
   .brand-sub { font-family:'Hind', sans-serif; font-size:0.68rem; color:var(--textMuted); font-weight:600; letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
   .nav-links { display:flex; gap:4px; align-items:center; list-style:none; }
   .nav-links a.nav-item {
@@ -152,10 +156,10 @@
   .hero-overlay {
     position:absolute; inset:0;
     background:linear-gradient(110deg,
-      rgba(38,77,48,0.92) 0%,
-      rgba(38,77,48,0.80) 35%,
-      rgba(38,77,48,0.40) 65%,
-      rgba(0,0,0,0.15) 100%);
+      rgba(90,35,10,0.88) 0%,
+      rgba(140,58,30,0.76) 35%,
+      rgba(184,92,56,0.38) 65%,
+      rgba(0,0,0,0.12) 100%);
   }
   /* Subtle dot texture */
   .hero-texture {
@@ -210,7 +214,7 @@
     transition:opacity 0.2s, transform 0.15s;
   }
   .btn:hover { opacity:0.88; transform:translateY(-1px); }
-  .btn-primary  { background:var(--green);  color:var(--cream); }
+  .btn-primary  { background:var(--terra);  color:var(--cream); }
   .btn-accent   { background:var(--terra);  color:var(--cream); }
   .btn-amber    { background:var(--amber);  color:var(--bark); font-weight:700; }
   .btn-dark     { background:var(--bark);   color:var(--cream); }
@@ -260,9 +264,21 @@
   .tribal-divider.alt {
     background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 20' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,10 10,2 20,10 30,2 40,10 50,2 60,10 70,2 80,10 90,2 100,10 110,2 120,10 130,2 140,10 150,2 160,10 170,2 180,10 190,2 200,10' fill='none' stroke='%239B3922' stroke-width='1.6'/%3E%3Cpolyline points='0,17 10,9 20,17 30,9 40,17 50,9 60,17 70,9 80,17 90,9 100,17 110,9 120,17 130,9 140,17 150,9 160,17 170,9 180,17 190,9 200,17' fill='none' stroke='%23C8960A' stroke-width='1.6'/%3E%3C/svg%3E");
   }
-  .tribal-divider.on-bark { background-color:var(--bark); }
+    .tribal-divider.on-bark { background-color:#2C1A0E; }
   .tribal-divider.on-paper { background-color:var(--paper); }
   .tribal-divider.on-cream { background-color:var(--cream); }
+
+  /* ====== Pithora background pattern (shared) ====== */
+  .pithora-bg {
+    position:relative; overflow:hidden;
+  }
+  .pithora-bg::before {
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='2' fill='%234A2510' fill-opacity='0.07'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%234A2510' fill-opacity='0.07'/%3E%3Ccircle cx='80' cy='0' r='1.5' fill='%234A2510' fill-opacity='0.07'/%3E%3Ccircle cx='0' cy='80' r='1.5' fill='%234A2510' fill-opacity='0.07'/%3E%3Ccircle cx='80' cy='80' r='1.5' fill='%234A2510' fill-opacity='0.07'/%3E%3Ccircle cx='20' cy='20' r='1' fill='%234A2510' fill-opacity='0.05'/%3E%3Ccircle cx='60' cy='20' r='1' fill='%234A2510' fill-opacity='0.05'/%3E%3Ccircle cx='20' cy='60' r='1' fill='%234A2510' fill-opacity='0.05'/%3E%3Ccircle cx='60' cy='60' r='1' fill='%234A2510' fill-opacity='0.05'/%3E%3C/svg%3E");
+    background-size:80px 80px;
+  }
+  .pithora-bg > * { position:relative; z-index:1; }
 
   /* ====== Sections ====== */
   section { padding:64px 24px; }
@@ -270,7 +286,7 @@
   .section-head { margin-bottom:36px; }
   .section-head.center { text-align:center; }
   .section-eyebrow {
-    font-size:0.80rem; font-weight:600;
+    font-size:0.93rem; font-weight:600;
     letter-spacing:0.18em; text-transform:uppercase;
     color:var(--terra); margin-bottom:8px;
   }
@@ -296,9 +312,16 @@
   }
   .impact::before {
     content:""; position:absolute; inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='2.5' fill='%23FAF7F0' fill-opacity='0.07'/%3E%3C/svg%3E");
-    background-size:40px 40px;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='50' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='2.5' fill='%23FAF7F0' fill-opacity='0.07'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3Ccircle cx='50' cy='50' r='1.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3Ccircle cx='50' cy='0' r='1.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3Ccircle cx='0' cy='50' r='1.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3C/svg%3E");
+    background-size:50px 50px;
     pointer-events:none;
+  }
+  /* Pithora zigzag top + bottom borders on impact */
+  .impact::after {
+    content:""; position:absolute; left:0; right:0; bottom:0; height:10px; z-index:1; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 60 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,10 7,2 14,10 21,2 28,10 35,2 42,10 49,2 56,10 60,10' fill='none' stroke='%23FAF7F0' stroke-width='1' stroke-opacity='0.20'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-size:60px 10px;
   }
   .impact-grid {
     max-width:1100px; margin:0 auto;
@@ -396,7 +419,17 @@
   .samvad-cta-row { display:flex; gap:12px; flex-wrap:wrap; }
 
   /* ====== Photo Gallery ====== */
-  .gallery-section { background:var(--paper); padding:64px 24px; }
+  .gallery-section {
+    background:var(--creamDk); padding:64px 24px;
+    position:relative; overflow:hidden;
+  }
+  /* Subtle Pithora diamond pattern */
+  .gallery-section::before {
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='%23B85C38' stroke-width='0.8' stroke-opacity='0.09'/%3E%3C/svg%3E");
+    background-size:60px 60px;
+  }
+  .gallery-section > * { position:relative; z-index:1; }
   .gallery-grid {
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -439,7 +472,24 @@
   }
 
   /* ====== Work areas grid ====== */
-  .work-section { background:var(--paper); }
+  .work-section {
+    background:var(--cream);
+    position:relative; overflow:hidden;
+  }
+  /* Pithora dot-grid */
+  .work-section::before {
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='2.5' fill='%23B85C38' fill-opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%23B85C38' fill-opacity='0.06'/%3E%3Ccircle cx='80' cy='80' r='1.5' fill='%23B85C38' fill-opacity='0.06'/%3E%3Ccircle cx='80' cy='0' r='1.5' fill='%23B85C38' fill-opacity='0.06'/%3E%3Ccircle cx='0' cy='80' r='1.5' fill='%23B85C38' fill-opacity='0.06'/%3E%3C/svg%3E");
+    background-size:80px 80px;
+  }
+  /* Pithora zigzag top-border on work section */
+  .work-section::after {
+    content:""; position:absolute; left:0; right:0; top:0; height:16px; z-index:1; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 80 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,16 10,2 20,16 30,2 40,16 50,2 60,16 70,2 80,16' fill='none' stroke='%23B85C38' stroke-width='1.4' stroke-opacity='0.18'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-size:80px 16px;
+  }
+  .work-section > * { position:relative; z-index:1; }
   .work-grid {
     display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;
   }
@@ -464,7 +514,7 @@
   .work-card-body { padding:18px 18px 16px; }
   .work-icon { font-size:1.6rem; margin-bottom:8px; }
   .work-card-tag {
-    font-size:0.72rem; font-weight:600;
+    font-size:0.85rem; font-weight:600;
     letter-spacing:0.10em; text-transform:uppercase;
     margin-bottom:4px;
   }
@@ -483,13 +533,36 @@
   .work-card-footer span { font-size:0.74rem; font-weight:600; letter-spacing:0.04em; }
 
   /* ====== Traditions section ====== */
-  .traditions-strip { background:var(--bark); padding:64px 24px; position:relative; overflow:hidden; }
-  .traditions-strip::before { content:""; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='2.5' fill='%23FAF7F0' fill-opacity='0.04'/%3E%3C/svg%3E"); background-size:40px 40px; }
-  .traditions-strip-head { text-align:center; max-width:700px; margin:0 auto 48px; position:relative; z-index:1; }
-  .traditions-strip-head .section-eyebrow { color:var(--amberLt); }
-  .traditions-strip-head .section-title { color:var(--cream); }
-  .traditions-strip-head .section-sub { color:rgba(250,247,240,0.65); }
-  .traditions-row { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+  .traditions-strip {
+    background: #C4895A;
+    background: linear-gradient(160deg, #C4895A 0%, #B87848 35%, #C4916A 65%, #BF8050 100%);
+    padding:64px 24px 72px; position:relative; overflow:hidden;
+  }
+  /* Pithora-style dot grid texture */
+  .traditions-strip::before {
+    content:""; position:absolute; inset:0; z-index:0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='2' fill='%234A2510' fill-opacity='0.10'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%234A2510' fill-opacity='0.10'/%3E%3Ccircle cx='60' cy='0' r='2' fill='%234A2510' fill-opacity='0.10'/%3E%3Ccircle cx='0' cy='60' r='2' fill='%234A2510' fill-opacity='0.10'/%3E%3Ccircle cx='60' cy='60' r='2' fill='%234A2510' fill-opacity='0.10'/%3E%3C/svg%3E");
+    background-size:60px 60px;
+  }
+  /* Pithora decorative border strip at top and bottom */
+  .traditions-strip::after {
+    content:""; position:absolute; left:0; right:0; bottom:0; height:18px; z-index:1;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 80 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,18 10,4 20,18 30,4 40,18 50,4 60,18 70,4 80,18' fill='none' stroke='%234A2510' stroke-width='1.5' stroke-opacity='0.25'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-size:80px 18px;
+  }
+  /* Pithora side horse motifs */
+  .traditions-pithora-left, .traditions-pithora-right {
+    position:absolute; top:50%; transform:translateY(-50%);
+    z-index:1; opacity:0.13; pointer-events:none;
+  }
+  .traditions-pithora-left { left:16px; }
+  .traditions-pithora-right { right:16px; transform:translateY(-50%) scaleX(-1); }
+  .traditions-strip-head { text-align:center; max-width:700px; margin:0 auto 48px; position:relative; z-index:2; }
+  .traditions-strip-head .section-eyebrow { color:#FAF7F0; opacity:0.82; }
+  .traditions-strip-head .section-title { color:#2C1A0E; text-shadow:0 1px 3px rgba(250,247,240,0.18); }
+  .traditions-strip-head .section-sub { color:rgba(44,26,14,0.72); }
+  .traditions-row { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:1200px; margin:0 auto; position:relative; z-index:2; }
   /* New card style */
   .trad-card { background:var(--cream); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; text-decoration:none; color:var(--textPri); transition:transform 0.25s,box-shadow 0.25s; }
   .trad-card:hover { transform:translateY(-5px); box-shadow:0 14px 36px rgba(0,0,0,0.35); }
@@ -506,27 +579,59 @@
 
   /* ====== Quote band ====== */
   .quote-band {
-    background:var(--bark); color:var(--cream);
-    text-align:center; padding:64px 24px;
+    background: linear-gradient(135deg, #A0522D 0%, #8B4513 40%, #A0622D 70%, #964A20 100%);
+    text-align:center; padding:72px 24px;
     position:relative; overflow:hidden;
   }
+  /* Pithora dot texture */
   .quote-band::before {
-    content:""; position:absolute; inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='2.5' fill='%23FAF7F0' fill-opacity='0.05'/%3E%3C/svg%3E");
-    background-size:40px 40px;
+    content:""; position:absolute; inset:0; z-index:0;
+    background-image:url("data:image/svg+xml,%3Csvg width='50' height='50' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='2' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3Ccircle cx='50' cy='50' r='1.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3C/svg%3E");
+    background-size:50px 50px;
+  }
+  /* Pithora zigzag top border */
+  .quote-band::after {
+    content:""; position:absolute; left:0; right:0; top:0; height:14px; z-index:1;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 60 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,14 7,2 14,14 21,2 28,14 35,2 42,14 49,2 56,14 60,14' fill='none' stroke='%23FAF7F0' stroke-width='1.2' stroke-opacity='0.20'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-size:60px 14px;
   }
   .quote-band blockquote {
     font-family:'Tiro Devanagari Hindi', serif;
-    font-size:1.6rem; font-style:italic;
-    color:var(--cream); line-height:1.55;
-    max-width:780px; margin:0 auto;
-    position:relative; z-index:1;
+    font-size:1.85rem; font-style:italic;
+    color:#FAF7F0; line-height:1.60;
+    max-width:820px; margin:0 auto;
+    position:relative; z-index:2;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.25);
   }
-  .quote-band .quote-mark { font-size:2rem; opacity:0.4; margin-bottom:14px; display:block; }
-  .quote-band .quote-by { font-family:'Hind', sans-serif; font-size:0.86rem; color:rgba(250,247,240,0.55); letter-spacing:0.06em; margin-top:14px; }
+  .quote-band .quote-mark { font-size:3rem; opacity:0.45; margin-bottom:10px; display:block; color:#FAF7F0; }
+  .quote-band .quote-by { font-family:'Hind', sans-serif; font-size:0.96rem; color:rgba(250,247,240,0.80); letter-spacing:0.06em; margin-top:18px; font-weight:500; }
+
+  /* ====== Contact section Pithora overlay ====== */
+  #contact::before {
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='70' height='70' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='2.5' fill='%23FAF7F0' fill-opacity='0.06'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%23FAF7F0' fill-opacity='0.05'/%3E%3Ccircle cx='70' cy='70' r='1.5' fill='%23FAF7F0' fill-opacity='0.05'/%3E%3Ccircle cx='70' cy='0' r='1.5' fill='%23FAF7F0' fill-opacity='0.05'/%3E%3Ccircle cx='0' cy='70' r='1.5' fill='%23FAF7F0' fill-opacity='0.05'/%3E%3Cpath d='M10 35 L20 20 L30 35' fill='none' stroke='%23FAF7F0' stroke-width='0.8' stroke-opacity='0.07'/%3E%3Cpath d='M40 35 L50 20 L60 35' fill='none' stroke='%23FAF7F0' stroke-width='0.8' stroke-opacity='0.07'/%3E%3C/svg%3E");
+    background-size:70px 70px;
+  }
+  #contact > * { position:relative; z-index:1; }
+  /* Pithora zigzag top border on contact */
+  #contact::after {
+    content:""; position:absolute; left:0; right:0; top:0; height:14px; z-index:1; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 60 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,14 7,2 14,14 21,2 28,14 35,2 42,14 49,2 56,14 60,14' fill='none' stroke='%23FAF7F0' stroke-width='1.2' stroke-opacity='0.18'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-size:60px 14px;
+  }
 
   /* ====== CTA tiles ====== */
-  .cta-tiles { background:var(--creamDk); }
+  .cta-tiles { background:var(--creamDk);
+    position:relative; overflow:hidden;
+  }
+
+  .cta-tiles > * { position:relative; z-index:1; }
+  .cta-tiles::before {
+      content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg width='56' height='56' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 4 L52 28 L28 52 L4 28 Z' fill='none' stroke='%23B85C38' stroke-width='0.9' stroke-opacity='0.09'/%3E%3Ccircle cx='28' cy='28' r='1.5' fill='%23C8960A' fill-opacity='0.10'/%3E%3C/svg%3E");
+    background-size:56px 56px;
+  }
   .cta-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; max-width:1100px; margin:0 auto; }
   .cta-tile {
     background:var(--cream); border-radius:6px;
@@ -539,9 +644,10 @@
   .cta-tile-title { font-family:'Tiro Devanagari Hindi', serif; font-size:1.2rem; color:var(--textPri); }
   .cta-tile-desc { font-size:0.85rem; color:var(--textSec); line-height:1.7; }
 
-  /* ====== Footer ====== */
+    /* ====== Footer ====== */
   footer.site-footer {
-    background:var(--bark); color:var(--cream);
+    background: linear-gradient(160deg, #2C1A0E 0%, #3D2410 40%, #2C1A0E 70%, #3D2410 100%);
+    color:var(--cream);
     padding:0 0 24px;
   }
   .footer-grid {
@@ -550,43 +656,42 @@
     display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
     gap:40px;
   }
-  .footer-brand { font-family:'Vesper Libre', serif; font-size:1.1rem; color:var(--cream); margin-bottom:8px; font-weight:700; }
-  .footer-brand-hi { font-family:'Tiro Devanagari Hindi', serif; font-size:1rem; color:var(--amberLt); margin-bottom:14px; }
-  .footer-blurb { font-size:0.84rem; color:rgba(250,247,240,0.65); line-height:1.85; max-width:320px; margin-bottom:18px; }
-  .footer-blurb em { color:rgba(250,247,240,0.50); font-size:0.78rem; display:block; margin-top:8px; }
+  .footer-brand { font-family:'Vesper Libre', serif; font-size:1.2rem; color:#FAF7F0; margin-bottom:8px; font-weight:700; }
+  .footer-brand-hi { font-family:'Tiro Devanagari Hindi', serif; font-size:1.05rem; color:#E8C46A; margin-bottom:14px; }
+  .footer-blurb { font-size:0.88rem; color:rgba(250,247,240,0.85); line-height:1.85; max-width:320px; margin-bottom:18px; }
+  .footer-blurb em { color:rgba(250,247,240,0.72); font-size:0.82rem; display:block; margin-top:8px; }
   .footer-socials { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
   .footer-socials .so {
     width:36px; height:36px; border-radius:6px;
-    background:rgba(250,247,240,0.10);
+    background:rgba(250,247,240,0.15);
     display:flex; align-items:center; justify-content:center;
     transition:background 0.2s, transform 0.2s;
-    text-decoration:none;
-    flex-shrink:0;
+    text-decoration:none; flex-shrink:0;
   }
-  .footer-socials .so:hover { background:rgba(250,247,240,0.22); transform:translateY(-2px); }
-  .footer-socials .so svg { width:18px; height:18px; fill:rgba(250,247,240,0.85); display:block; }
+  .footer-socials .so:hover { background:rgba(250,247,240,0.28); transform:translateY(-2px); }
+  .footer-socials .so svg { width:18px; height:18px; fill:rgba(250,247,240,0.92); display:block; }
   .footer-col h4 {
-    font-size:0.66rem; font-weight:600;
+    font-size:0.70rem; font-weight:700;
     letter-spacing:0.16em; text-transform:uppercase;
-    color:var(--amber); margin-bottom:14px;
+    color:#E8C46A; margin-bottom:14px;
   }
   .footer-col a {
-    display:block; font-size:0.84rem;
-    color:rgba(250,247,240,0.65);
+    display:block; font-size:0.86rem;
+    color:rgba(250,247,240,0.82);
     margin-bottom:8px; cursor:pointer;
     transition:color 0.2s;
   }
-  .footer-col a:hover { color:var(--cream); }
+  .footer-col a:hover { color:#FFFFFF; }
   .footer-bottom {
     max-width:1200px; margin:28px auto 0;
     padding:16px 24px;
-    border-top:1px solid rgba(250,247,240,0.10);
+    border-top:1px solid rgba(250,247,240,0.20);
     display:flex; justify-content:space-between; align-items:center;
-    font-size:0.72rem; color:rgba(250,247,240,0.40);
+    font-size:0.76rem; color:rgba(250,247,240,0.65);
     flex-wrap:wrap; gap:10px;
   }
 
-  /* ====== Responsive ====== */
+/* ====== Responsive ====== */
   /* ====== iPad Landscape / Laptop Small (1024px) ====== */
   @media (max-width:1024px) {
     .hero-inner { grid-template-columns:1fr; }
@@ -755,13 +860,14 @@
     background:var(--cream); padding:80px 24px;
     position:relative; overflow:hidden;
   }
+  /* Pithora horse silhouette + dot grid combined */
   .testimonials-section::before {
-    content:""; position:absolute; inset:0;
-    background-image:url('images/bg_page_03.jpg');
-    background-repeat:no-repeat; background-size:auto 110%;
-    background-position:left -60px center; opacity:0.05;
-    pointer-events:none;
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='2' fill='%23B85C38' fill-opacity='0.05'/%3E%3Ccircle cx='0' cy='0' r='1.5' fill='%23B85C38' fill-opacity='0.05'/%3E%3Ccircle cx='100' cy='100' r='1.5' fill='%23B85C38' fill-opacity='0.05'/%3E%3Ccircle cx='100' cy='0' r='1.5' fill='%23B85C38' fill-opacity='0.05'/%3E%3Ccircle cx='0' cy='100' r='1.5' fill='%23B85C38' fill-opacity='0.05'/%3E%3Cpath d='M25 75 L35 60 L45 75 L55 60 L65 75' fill='none' stroke='%23B85C38' stroke-width='0.8' stroke-opacity='0.07'/%3E%3C/svg%3E");
+    background-size:100px 100px;
   }
+  .testimonials-section > * { position:relative; z-index:1; }
   .testi-track-wrap { overflow:hidden; position:relative; }
   .testi-track { display:flex; transition:transform 0.55s cubic-bezier(0.4,0,0.2,1); }
   .testi-card { min-width:100%; padding:0 16px; box-sizing:border-box; }
@@ -774,22 +880,28 @@
   }
   .testi-quote-mark {
     font-family:'Tiro Devanagari Hindi', serif;
-    font-size:6rem; line-height:0.8; color:var(--amber);
-    opacity:0.22; position:absolute; top:28px; left:40px;
+    font-size:5rem; line-height:0.8; color:var(--amber);
+    opacity:0.18; position:absolute; bottom:28px; right:40px;
   }
   .testi-text {
     font-family:'Tiro Devanagari Hindi', serif;
-    font-size:1.12rem; line-height:1.80; color:var(--textPri);
-    margin-bottom:28px; padding-top:28px; font-style:italic;
+    font-size:1.08rem; line-height:1.80; color:var(--textPri);
+    margin-bottom:0; padding-top:0; font-style:italic;
   }
-  .testi-author { display:flex; align-items:center; gap:14px; }
+  .testi-author {
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center; gap:10px; margin-bottom:22px;
+  }
   .testi-avatar {
-    width:50px; height:50px; border-radius:50%;
+    width:88px; height:88px; border-radius:50%;
     background:var(--greenLt); flex-shrink:0;
     display:flex; align-items:center; justify-content:center;
-    font-size:1.4rem; border:2px solid rgba(58,107,69,0.25);
+    font-size:1.8rem; border:3px solid var(--amber);
+    box-shadow:0 4px 14px rgba(74,37,16,0.16);
+    object-fit:cover;
   }
-  .testi-name { font-weight:700; font-size:0.95rem; color:var(--textPri); }
+  .testi-name { font-weight:700; font-size:1.02rem; color:var(--textPri); margin-top:4px; }
+  .testi-role { font-size:0.78rem; color:var(--textMuted); margin-top:2px; }
   .testi-role { font-size:0.80rem; color:var(--textMuted); margin-top:2px; }
   .testi-controls {
     display:flex; align-items:center; justify-content:center;
@@ -802,7 +914,7 @@
     display:flex; align-items:center; justify-content:center;
     cursor:pointer; transition:all 0.2s; padding:0;
   }
-  .testi-arrow:hover { background:var(--green); color:var(--cream); border-color:var(--green); }
+  .testi-arrow:hover { background:var(--terra); color:var(--cream); border-color:var(--terra); }
   .testi-dots-wrap { display:flex; gap:6px; align-items:center; }
   .testi-dot {
     width:7px; height:7px; border-radius:50%;
@@ -1040,39 +1152,39 @@
  <div class="work-card-img">
  <img src="images/web/card_tribal_tourism.jpg" alt="Tribal Tourism" loading="lazy" />
 </div>
- <div class="work-card-strip" style="background:var(--green)"></div>
+ <div class="work-card-strip" style="background:var(--terra)"></div>
  <div class="work-card-body">
- <div class="work-card-tag" style="color:var(--green)">जनजातीय पर्यटन</div>
+ <div class="work-card-tag" style="color:var(--terra)">जनजातीय पर्यटन</div>
  <div class="work-card-name">Tribal Tourism</div>
  <div class="work-card-desc">झाबुआ अंचल में जीवंत जनजातीय अनुभव — गांव, खेत, जंगल और संस्कृति।</div>
 </div>
- <div class="work-card-footer"><span style="color:var(--green)">Know More →</span></div>
+ <div class="work-card-footer"><span style="color:var(--terra)">Know More →</span></div>
 </a>
 
       <a href="work-documentation.html" class="work-card">
  <div class="work-card-img">
  <img src="images/web/documentation_guide.jpg" alt="Documentation" loading="lazy" />
 </div>
- <div class="work-card-strip" style="background:var(--bark)"></div>
+ <div class="work-card-strip" style="background:var(--amber)"></div>
  <div class="work-card-body">
- <div class="work-card-tag" style="color:var(--bark)">दस्तावेज़ीकरण</div>
+ <div class="work-card-tag" style="color:var(--amber)">दस्तावेज़ीकरण</div>
  <div class="work-card-name">Documentation</div>
  <div class="work-card-desc">मौखिक परंपरा, लोक गीत, वनस्पति ज्ञान और इतिहास का संकलन।</div>
 </div>
- <div class="work-card-footer"><span style="color:var(--bark)">Know More →</span></div>
+ <div class="work-card-footer"><span style="color:var(--amber)">Know More →</span></div>
 </a>
 
       <a href="work-environment.html" class="work-card">
  <div class="work-card-img">
  <img src="images/web/card_environment.jpg" alt="Environment" loading="lazy" />
 </div>
- <div class="work-card-strip" style="background:var(--greenDk)"></div>
+ <div class="work-card-strip" style="background:var(--terra)"></div>
  <div class="work-card-body">
- <div class="work-card-tag" style="color:var(--greenDk)">पर्यावरण</div>
+ <div class="work-card-tag" style="color:var(--terra)">पर्यावरण</div>
  <div class="work-card-name">Environment</div>
  <div class="work-card-desc">मातावन वृक्षारोपण — 6+ मातावन, 13,000+ वृक्ष रोपित।</div>
 </div>
- <div class="work-card-footer"><span style="color:var(--greenDk)">Know More →</span></div>
+ <div class="work-card-footer"><span style="color:var(--terra)">Know More →</span></div>
 </a>
 
       <a href="work-education.html" class="work-card">
@@ -1105,26 +1217,26 @@
  <div class="work-card-img">
  <img src="images/web/card_knowledge.jpg" alt="Knowledge System" loading="lazy" />
 </div>
- <div class="work-card-strip" style="background:var(--green)"></div>
+ <div class="work-card-strip" style="background:var(--amber)"></div>
  <div class="work-card-body">
- <div class="work-card-tag" style="color:var(--green)">ज्ञान प्रणाली</div>
+ <div class="work-card-tag" style="color:var(--amber)">ज्ञान प्रणाली</div>
  <div class="work-card-name">Knowledge System</div>
  <div class="work-card-desc">वनस्पति विज्ञान, परंपरागत चिकित्सा और पारिस्थितिक ज्ञान का अनुसंधान।</div>
 </div>
- <div class="work-card-footer"><span style="color:var(--green)">Know More →</span></div>
+ <div class="work-card-footer"><span style="color:var(--amber)">Know More →</span></div>
 </a>
 
       <a href="work-grain-forest.html" class="work-card">
  <div class="work-card-img">
  <img src="images/web/card_grain_forest.jpg" alt="Grain and Forest" loading="lazy" />
 </div>
- <div class="work-card-strip" style="background:var(--greenDk)"></div>
+ <div class="work-card-strip" style="background:var(--terra)"></div>
  <div class="work-card-body">
- <div class="work-card-tag" style="color:var(--greenDk)">बीज और वन</div>
+ <div class="work-card-tag" style="color:var(--terra)">बीज और वन</div>
  <div class="work-card-name">Grain &amp; Forest</div>
  <div class="work-card-desc">देशी बीज संरक्षण, बीज बैंक और वन संरक्षण अभियान।</div>
 </div>
- <div class="work-card-footer"><span style="color:var(--greenDk)">Know More →</span></div>
+ <div class="work-card-footer"><span style="color:var(--terra)">Know More →</span></div>
 </a>
 
       <a href="work-tribal-art.html" class="work-card">
@@ -1146,7 +1258,46 @@
 <!-- ============ TRADITIONS ============ -->
 <div class="tribal-divider alt on-paper"></div>
 <section class="traditions-strip" id="traditions">
-  <div class="traditions-strip-head">
+
+  <!-- Pithora top zigzag border -->
+  <div style="position:absolute;top:0;left:0;right:0;height:18px;z-index:1;background-image:url(\"data:image/svg+xml,%3Csvg viewBox='0 0 80 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='0,0 10,14 20,0 30,14 40,0 50,14 60,0 70,14 80,0' fill='none' stroke='%234A2510' stroke-width='1.5' stroke-opacity='0.25'/%3E%3C/svg%3E\");background-repeat:repeat-x;background-size:80px 18px;"></div>
+
+  <!-- Pithora horse — left -->
+  <svg class="traditions-pithora-left" width="90" height="160" viewBox="0 0 90 160" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="45" cy="80" rx="28" ry="18" fill="none" stroke="#2C1A0E" stroke-width="4"/>
+    <circle cx="76" cy="60" r="13" fill="none" stroke="#2C1A0E" stroke-width="4"/>
+    <line x1="66" y1="70" x2="62" y2="78" stroke="#2C1A0E" stroke-width="3.5"/>
+    <line x1="26" y1="94" x2="18" y2="130" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="38" y1="97" x2="34" y2="132" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="54" y1="97" x2="56" y2="132" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="66" y1="94" x2="72" y2="130" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M17 72 Q8 56 12 42" fill="none" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M72 48 Q76 36 82 30" fill="none" stroke="#2C1A0E" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="78" cy="57" r="3.5" fill="#2C1A0E"/>
+    <!-- Pithora dots decoration on body -->
+    <circle cx="35" cy="78" r="3" fill="#2C1A0E"/>
+    <circle cx="48" cy="74" r="3" fill="#2C1A0E"/>
+    <circle cx="58" cy="78" r="3" fill="#2C1A0E"/>
+  </svg>
+
+  <!-- Pithora horse — right -->
+  <svg class="traditions-pithora-right" width="90" height="160" viewBox="0 0 90 160" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="45" cy="80" rx="28" ry="18" fill="none" stroke="#2C1A0E" stroke-width="4"/>
+    <circle cx="76" cy="60" r="13" fill="none" stroke="#2C1A0E" stroke-width="4"/>
+    <line x1="66" y1="70" x2="62" y2="78" stroke="#2C1A0E" stroke-width="3.5"/>
+    <line x1="26" y1="94" x2="18" y2="130" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="38" y1="97" x2="34" y2="132" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="54" y1="97" x2="56" y2="132" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="66" y1="94" x2="72" y2="130" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M17 72 Q8 56 12 42" fill="none" stroke="#2C1A0E" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M72 48 Q76 36 82 30" fill="none" stroke="#2C1A0E" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="78" cy="57" r="3.5" fill="#2C1A0E"/>
+    <circle cx="35" cy="78" r="3" fill="#2C1A0E"/>
+    <circle cx="48" cy="74" r="3" fill="#2C1A0E"/>
+    <circle cx="58" cy="78" r="3" fill="#2C1A0E"/>
+  </svg>
+
+  <div class="traditions-strip-head" style="position:relative;z-index:2;">
     <div class="section-eyebrow">जीवंत परंपराएँ · Living Traditions</div>
     <h2 class="section-title">Living Traditions of Jhabua</h2>
     <p class="section-sub">झाबुआ के भील और भीलाला समुदाय की वे परंपराएँ जो सदियों से जीवंत हैं</p>
@@ -1253,7 +1404,7 @@
 </section>
 
 <!-- ============ JHABUA ANCHAL ============ -->
-<section style="background:var(--cream);padding:72px 24px;" id="jhabua-anchal">
+<section style="background:var(--cream);padding:72px 24px;" id="jhabua-anchal" class="pithora-bg">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="jhabua-grid" style="display:grid;grid-template-columns:2fr 0.75fr;gap:56px;align-items:start;">
       <div>
@@ -1282,8 +1433,8 @@
           </div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="jhabua-anchal.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--greenDk);color:var(--cream);padding:11px 24px;border-radius:4px;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;transition:opacity 0.2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">झाबुआ जानें · Know More →</a>
-          <a href="jhabua-anchal.html#bheel" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--bark);border:2px solid var(--amber);padding:9px 22px;border-radius:4px;font-weight:600;font-size:0.88rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">भील समुदाय</a>
+          <a href="jhabua-anchal.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:var(--cream);padding:11px 24px;border-radius:4px;font-weight:600;font-size:0.88rem;letter-spacing:0.04em;transition:opacity 0.2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">झाबुआ जानें · Know More →</a>
+          <a href="jhabua-anchal.html#bheel" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--terraDk);border:2px solid var(--amber);padding:9px 22px;border-radius:4px;font-weight:600;font-size:0.88rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">भील समुदाय</a>
         </div>
       </div>
       <div class="jhabua-map-col" style="position:sticky;top:90px;">
@@ -1293,8 +1444,8 @@
         </div>
         <!-- two river tags -->
         <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;max-width:240px;margin-left:auto;margin-right:auto;">
-          <span style="background:var(--greenDk);color:var(--cream);font-family:'Tiro Devanagari Hindi',serif;font-size:0.72rem;padding:4px 12px;border-radius:20px;">🌊 माही नदी</span>
-          <span style="background:var(--greenDk);color:var(--cream);font-family:'Tiro Devanagari Hindi',serif;font-size:0.72rem;padding:4px 12px;border-radius:20px;">🌊 नर्मदा</span>
+          <span style="background:var(--terra);color:var(--cream);font-family:'Tiro Devanagari Hindi',serif;font-size:0.72rem;padding:4px 12px;border-radius:20px;">🌊 माही नदी</span>
+          <span style="background:var(--terra);color:var(--cream);font-family:'Tiro Devanagari Hindi',serif;font-size:0.72rem;padding:4px 12px;border-radius:20px;">🌊 नर्मदा</span>
         </div>
       </div>
     </div>
@@ -1316,7 +1467,7 @@
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section style="background:var(--paper);" id="about">
+<section style="background:var(--creamDk);" id="about" class="pithora-bg">
   <div class="container about-grid" style="display:grid; grid-template-columns:2fr 1fr; gap:48px; align-items:start;">
     <div>
       <div class="section-eyebrow">हमारा परिचय · About Us</div>
@@ -1348,6 +1499,7 @@
       </div>
     </div>
   </div>
+
 </section>
 
 <div class="tribal-divider alt on-paper"></div>
@@ -1366,75 +1518,65 @@
         <!-- 1. Rahul Kumar -->
         <div class="testi-card">
           <div class="testi-inner">
-            <div class="testi-quote-mark">"</div>
-            <p class="testi-text">वनवासी होली महापर्व के अवसर पर झाबुआ अंचल के ऐतिहासिक, सामाजिक और सांस्कृतिक स्थलों का भ्रमण मेरे लिए अत्यंत अद्भुत और रोमांचकारी अनुभव रहा। भारत घुमक्कड़ के माध्यम से वनवासी जीवन, परंपराओं और संस्कृति को नजदीक से जानने और जीने का अवसर मिला। आधुनिकता के इस दौर में भी यहाँ की परंपरागत जीवनशैली, खान-पान और सामाजिक मूल्यों का जीवंत बने रहना अत्यंत प्रेरणादायक है। यह यात्रा न केवल ज्ञानवर्धक रही, बल्कि आत्मीयता और अपनत्व से भरपूर एक यादगार अनुभव भी बनी। इस सफल आयोजन के लिए राजेन्द्र जी डिंडोड एवं समस्त साथियों का हृदय से आभार।</p>
             <div class="testi-author">
-              <img src="images/web/rahul_kumar_face.jpg" alt="राहुल कुमार" class="testi-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-              <div>
-                <div class="testi-name">राहुल कुमार</div>
-                <div class="testi-role">वरिष्ठ शोध अध्येता (इतिहास), जीवाजी विश्वविद्यालय, ग्वालियर</div>
-              </div>
+              <img src="images/web/rahul_kumar_face.jpg" alt="राहुल कुमार" class="testi-avatar">
+              <div class="testi-name">राहुल कुमार</div>
+              <div class="testi-role">वरिष्ठ शोध अध्येता (इतिहास), जीवाजी विश्वविद्यालय, ग्वालियर</div>
             </div>
+            <p class="testi-text">वनवासी होली महापर्व के अवसर पर झाबुआ अंचल के ऐतिहासिक, सामाजिक और सांस्कृतिक स्थलों का भ्रमण मेरे लिए अत्यंत अद्भुत और रोमांचकारी अनुभव रहा। भारत घुमक्कड़ के माध्यम से वनवासी जीवन, परंपराओं और संस्कृति को नजदीक से जानने और जीने का अवसर मिला। आधुनिकता के इस दौर में भी यहाँ की परंपरागत जीवनशैली, खान-पान और सामाजिक मूल्यों का जीवंत बने रहना अत्यंत प्रेरणादायक है। यह यात्रा न केवल ज्ञानवर्धक रही, बल्कि आत्मीयता और अपनत्व से भरपूर एक यादगार अनुभव भी बनी। इस सफल आयोजन के लिए राजेन्द्र जी डिंडोड एवं समस्त साथियों का हृदय से आभार।</p>
+            <div class="testi-quote-mark">"</div>
           </div>
         </div>
 
         <!-- 2. Jaya Jain -->
         <div class="testi-card">
           <div class="testi-inner">
-            <div class="testi-quote-mark">"</div>
-            <p class="testi-text">पिछले दो वर्षों से हम भगोरिया को देखने और समझने के लिए झाबुआ अंचल जा रहे थे, लेकिन इस बार भारत घुमक्कड़ टीम के सहयोग से जनजातीय जीवन को और अधिक करीब से देखने-समझने का अवसर मिला। जो भगोरिया दूर से केवल एक उत्सव दिखाई देता है, वह वास्तव में प्रेम, सहअस्तित्व, प्रकृति और सामुदायिक संतुलन का जीवंत दर्शन है। यह यात्रा हमारे लिए मिथ्या से सत्य की ओर बढ़ने जैसी रही — इसी अनुभव को हमने अपनी documentary "भगोरिया: मिथक से सत्य तक" में सहेजने का प्रयास किया है।</p>
             <div class="testi-author">
-              <img src="images/web/jaya_jain.jpg" alt="जया जैन" class="testi-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-              <div>
-                <div class="testi-name">जया जैन</div>
-                <div class="testi-role">संस्थापक, महुआबन फोक फाउंडेशन | Documentary Film Maker</div>
-              </div>
+              <img src="images/web/jaya_jain.jpg" alt="जया जैन" class="testi-avatar">
+              <div class="testi-name">जया जैन</div>
+              <div class="testi-role">संस्थापक, महुआबन फोक फाउंडेशन | Documentary Film Maker</div>
             </div>
+            <p class="testi-text">पिछले दो वर्षों से हम भगोरिया को देखने और समझने के लिए झाबुआ अंचल जा रहे थे, लेकिन इस बार भारत घुमक्कड़ टीम के सहयोग से जनजातीय जीवन को और अधिक करीब से देखने-समझने का अवसर मिला। जो भगोरिया दूर से केवल एक उत्सव दिखाई देता है, वह वास्तव में प्रेम, सहअस्तित्व, प्रकृति और सामुदायिक संतुलन का जीवंत दर्शन है। यह यात्रा हमारे लिए मिथ्या से सत्य की ओर बढ़ने जैसी रही — इसी अनुभव को हमने अपनी documentary "भगोरिया: मिथक से सत्य तक" में सहेजने का प्रयास किया है।</p>
+            <div class="testi-quote-mark">"</div>
           </div>
         </div>
 
         <!-- 3. Manoj Chauhan -->
         <div class="testi-card">
           <div class="testi-inner">
-            <div class="testi-quote-mark">"</div>
-            <p class="testi-text">संजय जी एवं राजेंद्र जी के नेतृत्व में जनजातीय दर्शन यात्रा ने हमें भील जनजाति की समृद्ध संस्कृति, प्रकृति से जुड़ी जीवनशैली, पारंपरिक व्यंजनों और पिथोरा चित्रकला जैसी अद्भुत लोक परंपराओं से परिचित कराया। यह अनुभव किताबों में दिखाई गई छवि से कहीं अधिक प्रेरणादायक और जीवंत था। भील समाज आज भी प्रकृति संरक्षण, आत्मनिर्भरता, कला, शिक्षा और ग्रामीण उद्यमिता में मिसाल बनकर उभर रहा है। भारत घुमक्कड़ समूह का यह प्रयास जनजातीय ज्ञान परंपरा को संरक्षित करने की एक सुंदर पहल है। हृदय से आभार एवं शुभकामनाएँ।</p>
             <div class="testi-author">
-              <img src="images/web/manoj_chauhan.jpg" alt="मनोज चौहान" class="testi-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-              <div>
-                <div class="testi-name">मनोज चौहान</div>
-                <div class="testi-role">पी.एच.डी. शोधार्थी, देवी अहिल्या विश्वविद्यालय, इंदौर</div>
-              </div>
+              <img src="images/web/manoj_chauhan.jpg" alt="मनोज चौहान" class="testi-avatar">
+              <div class="testi-name">मनोज चौहान</div>
+              <div class="testi-role">पी.एच.डी. शोधार्थी, देवी अहिल्या विश्वविद्यालय, इंदौर</div>
             </div>
+            <p class="testi-text">संजय जी एवं राजेंद्र जी के नेतृत्व में जनजातीय दर्शन यात्रा ने हमें भील जनजाति की समृद्ध संस्कृति, प्रकृति से जुड़ी जीवनशैली, पारंपरिक व्यंजनों और पिथोरा चित्रकला जैसी अद्भुत लोक परंपराओं से परिचित कराया। यह अनुभव किताबों में दिखाई गई छवि से कहीं अधिक प्रेरणादायक और जीवंत था। भील समाज आज भी प्रकृति संरक्षण, आत्मनिर्भरता, कला, शिक्षा और ग्रामीण उद्यमिता में मिसाल बनकर उभर रहा है। भारत घुमक्कड़ समूह का यह प्रयास जनजातीय ज्ञान परंपरा को संरक्षित करने की एक सुंदर पहल है। हृदय से आभार एवं शुभकामनाएँ।</p>
+            <div class="testi-quote-mark">"</div>
           </div>
         </div>
 
         <!-- 4. Chandna Dave -->
         <div class="testi-card">
           <div class="testi-inner">
-            <div class="testi-quote-mark">"</div>
-            <p class="testi-text">For the first time, I visited Salarpada in Jhabua and experienced a kind of warmth that felt rare and deeply human. The people welcomed me with so much care, love, and innocence — always asking if I had eaten, making me feel completely safe among strangers. Dancing with a 70+ year old aunty with unstoppable energy was unforgettable! Despite limited facilities, the community felt happier, calmer, and deeply connected to nature. Sleeping under the moonlit sky on a khatiya, eating delicious makki ki roti, and spending time in the open fields became memories I'll always cherish. Their way of life teaches us something important — to live simply, lovingly, and in harmony with nature.</p>
             <div class="testi-author">
-              <img src="images/web/chandna_dave.jpg" alt="Chandna Dave" class="testi-avatar" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
-              <div>
-                <div class="testi-name">Chandna Dave</div>
-                <div class="testi-role">Traveller & Nature Enthusiast</div>
-              </div>
+              <img src="images/web/chandna_dave.jpg" alt="Chandna Dave" class="testi-avatar">
+              <div class="testi-name">Chandna Dave</div>
+              <div class="testi-role">Traveller &amp; Nature Enthusiast</div>
             </div>
+            <p class="testi-text">For the first time, I visited Salarpada in Jhabua and experienced a kind of warmth that felt rare and deeply human. The people welcomed me with so much care, love, and innocence — always asking if I had eaten, making me feel completely safe among strangers. Dancing with a 70+ year old aunty with unstoppable energy was unforgettable! Despite limited facilities, the community felt happier, calmer, and deeply connected to nature. Sleeping under the moonlit sky on a khatiya, eating delicious makki ki roti, and spending time in the open fields became memories I'll always cherish. Their way of life teaches us something important — to live simply, lovingly, and in harmony with nature.</p>
+            <div class="testi-quote-mark">"</div>
           </div>
         </div>
 
         <!-- 5. Kavita Joshi -->
         <div class="testi-card">
           <div class="testi-inner">
-            <div class="testi-quote-mark">"</div>
-            <p class="testi-text">झाबुआ संवाद कार्यक्रम में जब मैंने पहली बार पिठोरा चित्रकला के पीछे की कहानी सुनी, तो मुझे एहसास हुआ कि हम एक अत्यंत समृद्ध सांस्कृतिक विरासत को खोने के कगार पर खड़े हैं। इस फाउंडेशन का काम इसे बचाने का सबसे सच्चा प्रयास है।</p>
             <div class="testi-author">
-              <div class="testi-avatar">🖊️</div>
-              <div>
-                <div class="testi-name">Kavita Joshi</div>
-                <div class="testi-role">Senior Journalist, Navbharat Times, Bhopal</div>
-              </div>
+              <div class="testi-avatar" style="font-size:2.2rem;">🖊️</div>
+              <div class="testi-name">Kavita Joshi</div>
+              <div class="testi-role">Senior Journalist, Navbharat Times, Bhopal</div>
             </div>
+            <p class="testi-text">झाबुआ संवाद कार्यक्रम में जब मैंने पहली बार पिठोरा चित्रकला के पीछे की कहानी सुनी, तो मुझे एहसास हुआ कि हम एक अत्यंत समृद्ध सांस्कृतिक विरासत को खोने के कगार पर खड़े हैं। इस फाउंडेशन का काम इसे बचाने का सबसे सच्चा प्रयास है।</p>
+            <div class="testi-quote-mark">"</div>
           </div>
         </div>
 
@@ -1450,84 +1592,103 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section style="background:var(--green); color:var(--cream);" id="contact">
+<section style="background:linear-gradient(160deg,#A04828 0%,#B85C38 50%,#A04828 100%); color:var(--cream); position:relative; overflow:hidden;" id="contact">
   <div class="container">
-    <div class="section-head center">
-      <div class="section-eyebrow" style="color:var(--amberLt);">संपर्क करें · Get in Touch</div>
-      <h2 class="section-title" style="color:var(--cream);">Let's Build This Together</h2>
-      <p class="section-sub" style="color:rgba(250,247,240,0.78);">हम आपके सवालों, सुझावों और सहयोग के लिए तैयार हैं।</p>
-    </div>
-    <!-- Contact Info Bar -->
-    <div class="contact-info-bar" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; max-width:980px; margin:0 auto 40px;">
-      <div style="text-align:center; padding:18px; background:rgba(250,247,240,0.06); border-radius:8px;">
-        <div style="font-size:1.6rem; margin-bottom:8px;">📍</div>
-        <div style="font-size:0.74rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt); margin-bottom:6px;">Location</div>
-        <a href="https://maps.app.goo.gl/6huRtiPgnMf6eUUKA?g_st=aw" target="_blank" rel="noopener" style="font-size:0.84rem; color:rgba(250,247,240,0.85); text-decoration:underline; text-underline-offset:3px;">Jhabua, MP — 457661<br/><span style="font-size:0.75rem; opacity:0.70;">View on Map →</span></a>
-      </div>
-      <div style="text-align:center; padding:18px; background:rgba(250,247,240,0.06); border-radius:8px;">
-        <div style="font-size:1.6rem; margin-bottom:8px;">📞</div>
-        <div style="font-size:0.74rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt); margin-bottom:6px;">Phone</div>
-        <a href="tel:+917049276815" style="font-size:0.84rem; color:rgba(250,247,240,0.85);">+91 70492 76815</a>
-      </div>
-      <div style="text-align:center; padding:18px; background:rgba(250,247,240,0.06); border-radius:8px;">
-        <div style="font-size:1.6rem; margin-bottom:8px;">💬</div>
-        <div style="font-size:0.74rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt); margin-bottom:6px;">WhatsApp</div>
-        <a href="https://wa.me/919399649318" target="_blank" rel="noopener" style="font-size:0.84rem; color:rgba(250,247,240,0.85);">+91 93996 49318</a>
-      </div>
-      <div style="text-align:center; padding:18px; background:rgba(250,247,240,0.06); border-radius:8px;">
-        <div style="font-size:1.6rem; margin-bottom:8px;">✉️</div>
-        <div style="font-size:0.74rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt); margin-bottom:6px;">Email</div>
-        <a href="mailto:bharatghumkkad@gmail.com" style="font-size:0.84rem; color:rgba(250,247,240,0.85);">bharatghumkkad@gmail.com</a>
-      </div>
+
+    <!-- Section heading — bigger text -->
+    <div class="section-head center" style="margin-bottom:44px;">
+      <div class="section-eyebrow" style="color:#E8C46A; font-size:1.00rem; letter-spacing:0.20em;">संपर्क करें · Get in Touch</div>
+      <h2 class="section-title" style="color:var(--cream); font-size:clamp(1.9rem,3.8vw,2.6rem); margin-top:8px;">Let's Build This Together</h2>
+      <p class="section-sub" style="color:rgba(250,247,240,0.88); font-size:1.08rem; margin-top:14px;">हम आपके सवालों, सुझावों और सहयोग के लिए तैयार हैं।<br/>झाबुआ यात्रा की योजना बनाएं या हमसे जुड़ें।</p>
     </div>
 
-    <!-- QR + Booking Form side by side -->
-    <div class="contact-main-grid" style="max-width:980px; margin:0 auto; display:grid; grid-template-columns:1fr 1.4fr; gap:24px; align-items:start;">
+    <!-- Two-column: Contact info LEFT, Form RIGHT -->
+    <div style="max-width:1020px; margin:0 auto; display:grid; grid-template-columns:1fr 1.5fr; gap:32px; align-items:start;">
 
-      <!-- LEFT: Donation QR + Bank Details -->
-      <div style="background:rgba(250,247,240,0.07); border:1px solid rgba(250,247,240,0.15); border-radius:12px; padding:28px; text-align:center;">
-        <div style="font-size:0.74rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--amberLt); margin-bottom:6px;">दान करें · Donate</div>
-        <div style="font-family:'Tiro Devanagari Hindi',serif; font-size:1rem; color:var(--cream); margin-bottom:16px;">QR Code स्कैन करके दान करें</div>
-        <div style="background:#fff; border-radius:10px; padding:12px; display:inline-block; margin-bottom:16px;">
-          <img src="images/web/donation_qr.jpg" alt="Donation QR Code" style="width:160px; height:160px; object-fit:contain; display:block;" />
-        </div>
-        <div style="background:rgba(250,247,240,0.05); border-radius:8px; padding:16px; text-align:left; font-size:0.82rem; color:rgba(250,247,240,0.85); line-height:2;">
-          <div style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt); margin-bottom:8px;">Bank Details</div>
-          <div><span style="color:rgba(250,247,240,0.55);">Bank:</span> HDFC Bank</div>
-          <div><span style="color:rgba(250,247,240,0.55);">Name:</span> Bharat Ghumkkad Samaj Darshan Foundation</div>
-          <div><span style="color:rgba(250,247,240,0.55);">A/C No:</span> 50200119406825</div>
-          <div><span style="color:rgba(250,247,240,0.55);">IFSC:</span> HDFC0009044</div>
-          <div><span style="color:rgba(250,247,240,0.55);">Branch:</span> Jhabua, M.P.</div>
-        </div>
-        <div style="margin-top:12px; font-size:0.75rem; color:rgba(250,247,240,0.45);">80G Tax Exemption Available</div>
+      <!-- LEFT: Contact details stacked -->
+      <div style="display:flex; flex-direction:column; gap:16px;">
+
+        <a href="https://maps.app.goo.gl/6huRtiPgnMf6eUUKA?g_st=aw" target="_blank" rel="noopener"
+           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:rgba(250,247,240,0.09); border:1px solid rgba(250,247,240,0.16); border-radius:12px; text-decoration:none; transition:background 0.2s;"
+           onmouseover="this.style.background='rgba(250,247,240,0.15)'" onmouseout="this.style.background='rgba(250,247,240,0.09)'">
+          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" flex-shrink="0">
+            <circle cx="16" cy="13" r="5" stroke="#E8C46A" stroke-width="2"/>
+            <path d="M16 2 C9.37 2 4 7.37 4 14 C4 22 16 30 16 30 C16 30 28 22 28 14 C28 7.37 22.63 2 16 2Z" stroke="#E8C46A" stroke-width="2" fill="none"/>
+            <circle cx="16" cy="13" r="2" fill="#E8C46A"/>
+          </svg>
+          <div>
+            <div style="font-size:0.88rem; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#E8C46A; margin-bottom:4px;">Location</div>
+            <div style="font-size:1.2rem; color:rgba(250,247,240,0.92); line-height:1.5;">Jhabua, Madhya Pradesh — 457661</div>
+            <div style="font-size:0.82rem; color:rgba(250,247,240,0.60); margin-top:2px;">View on Map →</div>
+          </div>
+        </a>
+
+        <a href="tel:+917049276815"
+           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:rgba(250,247,240,0.09); border:1px solid rgba(250,247,240,0.16); border-radius:12px; text-decoration:none; transition:background 0.2s;"
+           onmouseover="this.style.background='rgba(250,247,240,0.15)'" onmouseout="this.style.background='rgba(250,247,240,0.09)'">
+          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" flex-shrink="0">
+            <path d="M6 8 C6 7 7 6 8 6 L12 6 L14 12 L11 14 C12.5 17.5 14.5 19.5 18 21 L20 18 L26 20 L26 24 C26 25 25 26 24 26 C13 26 6 19 6 8Z" stroke="#E8C46A" stroke-width="2" fill="none" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div style="font-size:0.88rem; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#E8C46A; margin-bottom:4px;">Phone</div>
+            <div style="font-size:1.28rem; color:rgba(250,247,240,0.92); font-weight:600;">+91 70492 76815</div>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919399649318" target="_blank" rel="noopener"
+           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:rgba(250,247,240,0.09); border:1px solid rgba(250,247,240,0.16); border-radius:12px; text-decoration:none; transition:background 0.2s;"
+           onmouseover="this.style.background='rgba(250,247,240,0.15)'" onmouseout="this.style.background='rgba(250,247,240,0.09)'">
+          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" flex-shrink="0">
+            <path d="M16 4C9.37 4 4 9.37 4 16C4 18.24 4.64 20.33 5.74 22.1L4 28L10.08 26.3C11.8 27.34 13.83 27.98 16 27.98C22.63 27.98 28 22.61 28 15.98C28 9.35 22.63 4 16 4Z" stroke="#E8C46A" stroke-width="2" fill="none"/>
+            <path d="M21 19C20.8 19.4 20.2 20 19.7 20.1C19.2 20.2 18.6 20.2 17.5 19.7C16 19 14.2 17.2 13.5 16C13 15.2 12.9 14.5 13.1 14C13.3 13.5 13.7 13 14.1 12.8C14.3 12.7 14.5 12.7 14.7 12.7C14.9 12.7 15 12.7 15.2 13.2L16 15C16.1 15.3 16.1 15.5 16 15.7C15.9 15.9 15.8 16 15.7 16.1C15.5 16.3 15.3 16.5 15.5 16.8C15.9 17.3 16.7 18.1 17.5 18.4C17.8 18.5 18 18.4 18.2 18.2L18.7 17.6C18.9 17.4 19.1 17.3 19.4 17.4L21.2 18.2C21.5 18.3 21.6 18.4 21.6 18.6C21.6 18.7 21.3 19 21 19Z" fill="#E8C46A"/>
+          </svg>
+          <div>
+            <div style="font-size:0.88rem; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#E8C46A; margin-bottom:4px;">WhatsApp</div>
+            <div style="font-size:1.28rem; color:rgba(250,247,240,0.92); font-weight:600;">+91 93996 49318</div>
+          </div>
+        </a>
+
+        <a href="mailto:bharatghumkkad@gmail.com"
+           style="display:flex; align-items:center; gap:18px; padding:20px 22px; background:rgba(250,247,240,0.09); border:1px solid rgba(250,247,240,0.16); border-radius:12px; text-decoration:none; transition:background 0.2s;"
+           onmouseover="this.style.background='rgba(250,247,240,0.15)'" onmouseout="this.style.background='rgba(250,247,240,0.09)'">
+          <svg width="36" height="36" viewBox="0 0 32 32" fill="none" flex-shrink="0">
+            <rect x="4" y="8" width="24" height="16" rx="3" stroke="#E8C46A" stroke-width="2"/>
+            <path d="M4 11 L16 19 L28 11" stroke="#E8C46A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div style="font-size:0.88rem; font-weight:700; letter-spacing:0.10em; text-transform:uppercase; color:#E8C46A; margin-bottom:4px;">Email</div>
+            <div style="font-size:1.15rem; color:rgba(250,247,240,0.92);">bharatghumkkad@gmail.com</div>
+          </div>
+        </a>
+
       </div>
 
       <!-- RIGHT: Tour Booking Form -->
-      <div style="background:rgba(250,247,240,0.07); border:1px solid rgba(250,247,240,0.15); border-radius:12px; padding:28px;">
-        <div style="margin-bottom:20px;">
-          <div style="font-size:0.74rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--amberLt); margin-bottom:6px;">टूर बुकिंग · Tour Booking</div>
-          <div style="font-family:'Tiro Devanagari Hindi',serif; font-size:1rem; color:var(--cream);">झाबुआ की यात्रा के लिए अपना विवरण भेजें</div>
+      <div style="background:rgba(250,247,240,0.08); border:1px solid rgba(250,247,240,0.16); border-radius:14px; padding:32px;">
+        <div style="margin-bottom:22px;">
+          <div style="font-size:0.76rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#E8C46A; margin-bottom:6px;">टूर बुकिंग · Tour Booking</div>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; font-size:1.15rem; color:var(--cream); line-height:1.5;">झाबुआ की यात्रा के लिए अपना विवरण भेजें</div>
         </div>
-        <form id="tourForm" onsubmit="handleSubmit(event)" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div style="display:flex; flex-direction:column; gap:5px;">
-            <label style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt);">नाम · Name *</label>
-            <input type="text" name="name" required placeholder="Your full name" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:9px 12px; color:var(--cream); font-size:0.87rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
+        <form id="tourForm" onsubmit="handleSubmit(event)" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.92rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#E8C46A;">नाम · Name *</label>
+            <input type="text" name="name" required placeholder="Your full name" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:11px 14px; color:var(--cream); font-size:0.96rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='#E8C46A'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
           </div>
-          <div style="display:flex; flex-direction:column; gap:5px;">
-            <label style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt);">फोन · Phone *</label>
-            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:9px 12px; color:var(--cream); font-size:0.87rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.92rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#E8C46A;">फोन · Phone *</label>
+            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:11px 14px; color:var(--cream); font-size:0.96rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='#E8C46A'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
           </div>
-          <div style="display:flex; flex-direction:column; gap:5px;">
-            <label style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt);">ईमेल · Email *</label>
-            <input type="email" name="email" required placeholder="your@email.com" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:9px 12px; color:var(--cream); font-size:0.87rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.92rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#E8C46A;">ईमेल · Email</label>
+            <input type="email" name="email" placeholder="your@email.com" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:11px 14px; color:var(--cream); font-size:0.96rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='#E8C46A'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
           </div>
-          <div style="display:flex; flex-direction:column; gap:5px;">
-            <label style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt);">शहर · City</label>
-            <input type="text" name="address" placeholder="City, State" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:9px 12px; color:var(--cream); font-size:0.87rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:0.92rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#E8C46A;">शहर · City</label>
+            <input type="text" name="address" placeholder="City, State" style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:11px 14px; color:var(--cream); font-size:0.96rem; outline:none; font-family:'Hind',sans-serif;" onfocus="this.style.borderColor='#E8C46A'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"/>
           </div>
-          <div style="display:flex; flex-direction:column; gap:5px; grid-column:1/-1;">
-            <label style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt);">उद्देश्य · Purpose *</label>
-            <select name="purpose" required style="background:rgba(20,50,25,0.90); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:9px 12px; color:var(--cream); font-size:0.87rem; outline:none; font-family:'Hind',sans-serif; cursor:pointer;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'">
+          <div style="display:flex; flex-direction:column; gap:6px; grid-column:1/-1;">
+            <label style="font-size:0.92rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#E8C46A;">उद्देश्य · Purpose *</label>
+            <select name="purpose" required style="background:rgba(90,30,10,0.92); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:11px 14px; color:var(--cream); font-size:0.96rem; outline:none; font-family:'Hind',sans-serif; cursor:pointer;" onfocus="this.style.borderColor='#E8C46A'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'">
               <option value="" disabled selected>— उद्देश्य चुनें —</option>
               <option value="tribal_tourism">🏕️ Tribal Tourism — जनजातीय पर्यटन</option>
               <option value="cultural_immersion">🎭 Cultural Immersion — सांस्कृतिक अनुभव</option>
@@ -1542,21 +1703,20 @@
               <option value="other">✏️ Other — अन्य</option>
             </select>
           </div>
-          <div style="display:flex; flex-direction:column; gap:5px; grid-column:1/-1;">
-            <label style="font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--amberLt);">संदेश · Message</label>
-            <textarea name="message" rows="2" placeholder="कोई विशेष जानकारी या सवाल..." style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:9px 12px; color:var(--cream); font-size:0.87rem; outline:none; font-family:'Hind',sans-serif; resize:vertical;" onfocus="this.style.borderColor='var(--amber)'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"></textarea>
+          <div style="display:flex; flex-direction:column; gap:6px; grid-column:1/-1;">
+            <label style="font-size:0.92rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#E8C46A;">संदेश · Message</label>
+            <textarea name="message" rows="3" placeholder="कोई विशेष जानकारी या सवाल..." style="background:rgba(250,247,240,0.10); border:1px solid rgba(250,247,240,0.25); border-radius:6px; padding:11px 14px; color:var(--cream); font-size:0.96rem; outline:none; font-family:'Hind',sans-serif; resize:vertical;" onfocus="this.style.borderColor='#E8C46A'" onblur="this.style.borderColor='rgba(250,247,240,0.25)'"></textarea>
           </div>
-          <div style="grid-column:1/-1; display:flex; flex-direction:column; gap:10px; margin-top:4px;">
-            <button type="submit" style="background:#25D366; color:#fff; font-weight:700; font-size:0.88rem; padding:11px 24px; border:none; border-radius:6px; cursor:pointer; font-family:'Hind',sans-serif; display:flex; align-items:center; justify-content:center; gap:8px;" onmouseover="this.style.background='#1ebe5d'" onmouseout="this.style.background='#25D366'">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp पर Submit करें →
+          <div style="grid-column:1/-1; display:flex; gap:12px; margin-top:4px; flex-wrap:wrap;">
+            <button type="submit" style="background:#25D366; color:#fff; font-weight:600; font-size:0.88rem; padding:9px 20px; border:none; border-radius:6px; cursor:pointer; font-family:'Hind',sans-serif;" onmouseover="this.style.background='#1ebe5d'" onmouseout="this.style.background='#25D366'">
+              WhatsApp
             </button>
-            <a href="tel:+917049276815" style="display:flex; align-items:center; justify-content:center; gap:8px; background:rgba(250,247,240,0.10); color:var(--cream); font-weight:600; font-size:0.85rem; padding:10px 24px; border-radius:6px; text-decoration:none; border:1px solid rgba(250,247,240,0.2); text-align:center;" onmouseover="this.style.background='rgba(250,247,240,0.18)'" onmouseout="this.style.background='rgba(250,247,240,0.10)'">
- +91 70492 76815 पर Call करें
-</a>
+            <a href="tel:+917049276815" style="flex:1; min-width:160px; display:flex; align-items:center; justify-content:center; gap:8px; background:rgba(250,247,240,0.10); color:var(--cream); font-weight:600; font-size:0.96rem; padding:13px 24px; border-radius:8px; text-decoration:none; border:1px solid rgba(250,247,240,0.22);" onmouseover="this.style.background='rgba(250,247,240,0.18)'" onmouseout="this.style.background='rgba(250,247,240,0.10)'">
+              Call करें →
+            </a>
           </div>
         </form>
-        <div id="formSuccess" style="display:none; text-align:center; padding:24px; color:var(--amberLt); font-size:1.05rem; font-family:'Tiro Devanagari Hindi',serif;">
+        <div id="formSuccess" style="display:none; text-align:center; padding:28px; color:#E8C46A; font-size:1.1rem; font-family:'Tiro Devanagari Hindi',serif;">
           🙏 धन्यवाद! हम जल्द ही आपसे संपर्क करेंगे।
         </div>
       </div>
@@ -1574,9 +1734,11 @@
       document.getElementById('formSuccess').style.display = 'block';
     }
     </script>
+
   </div>
 </section>
 
+<!-- ============ FOOTER ============ -->
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="tribal-divider alt on-bark"></div>
@@ -1594,39 +1756,30 @@
         <em>"जनजातीय ज्ञान, प्रकृति और स्वावलंबन की जीवंत यात्रा"</em>
       </div>
       <div class="footer-socials">
-        <!-- Facebook -->
         <a class="so" href="https://www.facebook.com/profile.php?id=61575201462354&mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook">
- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-</a>
-        <!-- Instagram -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+        </a>
         <a class="so" href="https://www.instagram.com/bharat_ghumkkad_jhabua?igsh=bGFyemF5Yzk5cmly&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-</a>
-        <!-- YouTube -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
         <a class="so" href="https://youtube.com/@rajendradindod01?si=5iSqOUTHFV6mYzJO" target="_blank" rel="noopener" aria-label="YouTube">
- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-</a>
-        <!-- X / Twitter -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
         <a class="so" href="https://x.com/bharat_ghumkkad?s=21" target="_blank" rel="noopener" aria-label="X (Twitter)">
- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-</a>
-        <!-- LinkedIn -->
-        <a class="so" href="https://www.linkedin.com/in/झाबुआ-अंचल-b08395341?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn">
- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-</a>
-        <!-- Blog -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
         <a class="so" href="https://bgsdfjhabua.blogspot.com/?m=1" target="_blank" rel="noopener" aria-label="Blog">
- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.026 0h19.95C23.1 0 24 .9 24 2.026v19.95C24 23.1 23.1 24 21.976 24zM9.457 6.927H6.927a.545.545 0 00-.545.545v2.53c0 .3.244.545.545.545h2.53c.3 0 .545-.244.545-.545v-2.53a.545.545 0 00-.545-.545zm7.616 0h-4.36a.545.545 0 00-.545.545v.909c0 .3.244.545.545.545h4.36c.3 0 .545-.244.545-.545v-.909a.545.545 0 00-.545-.545zm0 3.272h-4.36a.545.545 0 00-.545.545v.909c0 .3.244.545.545.545h4.36c.3 0 .545-.244.545-.545v-.909a.545.545 0 00-.545-.545zm.545 4.91c0-.3-.244-.545-.545-.545H6.927a.545.545 0 00-.545.545v4.364c0 .3.244.545.545.545h10.146c.3 0 .545-.244.545-.545v-4.364z"/></svg>
-</a>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.026 0h19.95C23.1 0 24 .9 24 2.026v19.95C24 23.1 23.1 24 21.976 24zM9.457 6.927H6.927a.545.545 0 00-.545.545v2.53c0 .3.244.545.545.545h2.53c.3 0 .545-.244.545-.545v-2.53a.545.545 0 00-.545-.545zm7.616 0h-4.36a.545.545 0 00-.545.545v.909c0 .3.244.545.545.545h4.36c.3 0 .545-.244.545-.545v-.909a.545.545 0 00-.545-.545zm0 3.272h-4.36a.545.545 0 00-.545.545v.909c0 .3.244.545.545.545h4.36c.3 0 .545-.244.545-.545v-.909a.545.545 0 00-.545-.545zm.545 4.91c0-.3-.244-.545-.545-.545H6.927a.545.545 0 00-.545.545v4.364c0 .3.244.545.545.545h10.146c.3 0 .545-.244.545-.545v-4.364z"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-col">
       <h4>Our Work</h4>
-      <a href="#work">Tribal Identity</a>
-      <a href="#work">Environment / Matavan</a>
-      <a href="#work">Education / गुरुकुल</a>
-      <a href="#work">Food &amp; Livelihood</a>
-      <a href="#work">Documentation</a>
+      <a href="index.html#work">Tribal Identity</a>
+      <a href="index.html#work">Environment / Matavan</a>
+      <a href="index.html#work">Education / गुरुकुल</a>
+      <a href="index.html#work">Food &amp; Livelihood</a>
+      <a href="index.html#work">Documentation</a>
     </div>
     <div class="footer-col">
       <h4>Events</h4>
@@ -1637,14 +1790,14 @@
     </div>
     <div class="footer-col">
       <h4>Organisation</h4>
-      <a href="#about">About Us</a>
-      <a href="#support">Support / Donate</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="donate.html">Support / Donate</a>
     </div>
   </div>
   <div class="footer-bottom">
     <div>© 2026 Bharat Ghumakkad Samaj Darshan Foundation · झाबुआ, मध्य प्रदेश</div>
-    <div>Founder: Rajendra Dindod</div>
+    <div>Designed by: Jaya Jain</div>
   </div>
 </footer>
 
