@@ -2,6 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -32,11 +33,11 @@
   .nav-strip{height:3px;background:linear-gradient(90deg, var(--terraDk), var(--amber), var(--terra), var(--amber), var(--terraDk));}
   .main-nav{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer;}
-  .brand-mark{width:50px;height:50px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-  .brand-mark img{width:50px;height:50px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(74,37,16,0.20));}
-  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
-  .brand-name{font-family:'Vesper Libre',serif;font-weight:700;font-size:1.05rem;color:var(--terraDk);letter-spacing:0.01em;}
-  .brand-sub{font-size:0.68rem;color:var(--textMuted);font-weight:600;letter-spacing:0.14em;text-transform:uppercase;margin-top:2px;}
+  .brand-mark { width:50px; height:50px; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+  .brand-mark img { width:50px; height:50px; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(74,37,16,0.20)); }
+  .brand-text { display:flex; flex-direction:column; line-height:1.1; }
+  .brand-name { font-family:'Vesper Libre', serif; font-weight:700; font-size:1.05rem; color:var(--terraDk); letter-spacing:0.01em; }
+  .brand-sub { font-family:'Hind', sans-serif; font-size:0.68rem; color:var(--textMuted,#8C6E57); font-weight:600; letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
   .nav-links{list-style:none;display:flex;align-items:center;gap:4px;}
   .nav-links a.nav-item{display:inline-flex;flex-direction:column;align-items:center;padding:8px 12px;font-size:0.86rem;font-weight:500;color:var(--textSec);border-bottom:2px solid transparent;border-radius:4px 4px 0 0;transition:color 0.2s,border-color 0.2s;}
   .nav-links a.nav-item:hover{color:var(--terra);}
@@ -167,8 +168,8 @@
     .activities-grid{grid-template-columns:1fr;}
     .gallery-row{grid-template-columns:1fr 1fr;}
     .cta-btns{flex-direction:column;align-items:center;}
-      .footer-bottom { max-width:1200px; margin:28px auto 0; padding:16px 24px; border-top:1px solid rgba(250,247,240,0.20); display:flex; justify-content:space-between; align-items:center; font-size:0.76rem; color:rgba(250,247,240,0.65); flex-wrap:wrap; gap:10px; }    .brand-sub{display:none;}
-    .brand-name{font-size:0.92rem;}
+      .footer-bottom { max-width:1200px; margin:28px auto 0; padding:16px 24px; border-top:1px solid rgba(250,247,240,0.20); display:flex; justify-content:space-between; align-items:center; font-size:0.76rem; color:rgba(250,247,240,0.65); flex-wrap:wrap; gap:10px; }    .brand-sub { font-family:'Hind', sans-serif; font-size:0.68rem; color:var(--textMuted,#8C6E57); font-weight:600; letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+    .brand-name { font-family:'Vesper Libre', serif; font-weight:700; font-size:1.05rem; color:var(--terraDk); letter-spacing:0.01em; }
     .menu-toggle{font-size:1.4rem;}
 
   }
@@ -192,7 +193,7 @@
   .brand-mark img { width:50px; height:50px; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(74,37,16,0.20)); }
   .brand-text { display:flex; flex-direction:column; line-height:1.1; }
   .brand-name { font-family:'Vesper Libre', serif; font-weight:700; font-size:1.05rem; color:var(--terraDk); letter-spacing:0.01em; }
-  .brand-sub { font-size:0.68rem; color:var(--textMuted,#8C6E57); font-weight:600; letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+  .brand-sub { font-family:'Hind', sans-serif; font-size:0.68rem; color:var(--textMuted,#8C6E57); font-weight:600; letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
   .nav-links { display:flex; gap:4px; align-items:center; list-style:none; }
   .nav-links a.nav-item { display:inline-flex; flex-direction:column; align-items:center; padding:8px 12px; font-size:0.86rem; font-weight:500; color:var(--textSec,#5C3D28); border-bottom:2px solid transparent; border-radius:4px 4px 0 0; transition:color 0.2s, border-color 0.2s; }
   .nav-links a.nav-item:hover { color:var(--terra); }
@@ -233,8 +234,9 @@
 </span>
 </a>
     <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
-    <ul class="nav-links" id="navLinks">
+        <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-item">Home<span class="hin">मुख्य</span></a></li>
+
       <li class="has-dropdown">
         <a href="index.html#work" class="nav-item">Our Work<span class="hin">हमारे आयाम</span></a>
         <div class="nav-dropdown">
@@ -248,6 +250,7 @@
           <a href="work-tribal-art.html">Tribal Art</a>
         </div>
       </li>
+
       <li class="has-dropdown">
         <a href="index.html#traditions" class="nav-item">Traditions<span class="hin">परंपरा</span></a>
         <div class="nav-dropdown">
@@ -261,7 +264,7 @@
           <a href="tradition-bharadi.html">भराड़ी</a>
         </div>
       </li>
-      
+
       <li><a href="about.html" class="nav-item">About Us<span class="hin">परिचय</span></a></li>
       <li><a href="index.html#contact" class="nav-item">Contact<span class="hin">संपर्क</span></a></li>
       <li><a href="jhabua-anchal.html" class="nav-item">Jhabua Anchal<span class="hin">झाबुआ अंचल</span></a></li>

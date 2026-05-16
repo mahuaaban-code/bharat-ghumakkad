@@ -1,0 +1,89 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: rounded square, deep dark clay -->
+  <rect width="256" height="256" rx="44" fill="#2C1A0E"/>
+
+  <!-- Amber outer border ring -->
+  <rect x="8" y="8" width="240" height="240" rx="38" fill="none" stroke="#C8960A" stroke-width="5" opacity="0.85"/>
+
+  <!-- Pithora dots at corners (tribal frame) -->
+  <circle cx="36" cy="36" r="4.5" fill="#C8960A" opacity="0.9"/>
+  <circle cx="220" cy="36" r="4.5" fill="#C8960A" opacity="0.9"/>
+  <circle cx="36" cy="220" r="4.5" fill="#C8960A" opacity="0.9"/>
+  <circle cx="220" cy="220" r="4.5" fill="#C8960A" opacity="0.9"/>
+
+  <!-- Pithora dots mid-sides -->
+  <circle cx="128" cy="22" r="3" fill="#C8960A" opacity="0.6"/>
+  <circle cx="128" cy="234" r="3" fill="#C8960A" opacity="0.6"/>
+  <circle cx="22"  cy="128" r="3" fill="#C8960A" opacity="0.6"/>
+  <circle cx="234" cy="128" r="3" fill="#C8960A" opacity="0.6"/>
+
+  <!-- Pithora Horse — iconic Bhil tribal art motif, bold & clear -->
+  <g fill="#E8C46A" stroke="#E8C46A" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- Horse body — filled solid shape -->
+    <path d="
+      M 80 160
+      C 72 155 66 140 68 124
+      C 70 108 78 100 88 96
+      C 96 93 106 95 112 98
+      L 118 88
+      C 122 80 130 72 138 70
+      C 148 68 154 74 152 84
+      L 148 96
+      C 158 95 168 100 172 110
+      C 176 120 170 134 162 140
+      C 156 145 148 146 142 144
+      L 140 162
+      C 140 168 136 174 130 176
+      C 124 178 118 174 116 168
+      L 114 156
+      C 108 158 100 158 94 156
+      L 90 172
+      C 89 178 84 182 78 180
+      C 72 178 70 172 72 166
+      Z
+    " stroke-width="2"/>
+
+    <!-- Neck up to head -->
+    <path d="M 112 98 C 108 90 110 80 116 74 C 120 70 126 68 130 70" 
+          fill="none" stroke="#E8C46A" stroke-width="6"/>
+
+    <!-- Head -->
+    <ellipse cx="136" cy="68" rx="14" ry="10" transform="rotate(-20 136 68)" fill="#E8C46A"/>
+
+    <!-- Eye -->
+    <circle cx="140" cy="64" r="3.5" fill="#2C1A0E"/>
+    <circle cx="141" cy="63" r="1.2" fill="#C8960A"/>
+
+    <!-- Ear -->
+    <path d="M 144 58 L 150 50 L 154 58" fill="#E8C46A" stroke="#2C1A0E" stroke-width="1.5"/>
+
+    <!-- Mane -->
+    <path d="M 118 78 C 124 74 130 72 136 70" fill="none" stroke="#B85C38" stroke-width="3.5" stroke-dasharray="4 2"/>
+
+    <!-- Tail -->
+    <path d="M 80 158 C 68 162 56 158 50 148 C 46 140 50 132 56 136" 
+          fill="none" stroke="#E8C46A" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Legs — 4 legs, slightly stylised -->
+    <!-- Front right leg -->
+    <path d="M 142 144 L 144 164 L 146 178 L 148 182" fill="none" stroke="#E8C46A" stroke-width="7" stroke-linecap="round"/>
+    <!-- Front left leg -->
+    <path d="M 130 176 L 130 192 L 128 204" fill="none" stroke="#E8C46A" stroke-width="7" stroke-linecap="round"/>
+    <!-- Back right leg -->
+    <path d="M 90 172 L 88 188 L 86 202" fill="none" stroke="#E8C46A" stroke-width="7" stroke-linecap="round"/>
+    <!-- Back left leg -->
+    <path d="M 72 166 L 70 182 L 68 196" fill="none" stroke="#E8C46A" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Hooves -->
+    <ellipse cx="148" cy="184" rx="6" ry="3.5" fill="#C8960A"/>
+    <ellipse cx="128" cy="205" rx="6" ry="3.5" fill="#C8960A"/>
+    <ellipse cx="86"  cy="203" rx="6" ry="3.5" fill="#C8960A"/>
+    <ellipse cx="68"  cy="197" rx="6" ry="3.5" fill="#C8960A"/>
+
+  </g>
+
+  <!-- Ground line (Pithora tradition — horse always stands on ground) -->
+  <line x1="44" y1="214" x2="212" y2="214" stroke="#C8960A" stroke-width="3" opacity="0.55" stroke-dasharray="6 4"/>
+
+</svg>
