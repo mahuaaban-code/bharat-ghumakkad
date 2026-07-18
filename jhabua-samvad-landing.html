@@ -26,7 +26,7 @@
   <header data-screen-label="Nav" style="position:sticky;top:0;z-index:200;background:rgba(250,247,240,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(74,37,16,0.12)">
     <div style="height:3px;background:linear-gradient(90deg,#3A6B45,#C8960A,#9B3922,#3A6B45)"></div>
     <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;height:62px;flex-wrap:wrap">
-      <a href="#top" style="display:flex;align-items:center"><img src="assets/logo-horizontal-crop.png" alt="Bharat Ghumakkad" style="height:44px;width:auto"></img></a>
+      <a href="#top" style="display:flex;align-items:center"><img src="images/web/logo-horizontal-crop.png" alt="Bharat Ghumakkad" style="height:44px;width:auto"></img></a>
       <nav style="display:flex;align-items:center;gap:2px;flex-wrap:wrap">
         <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5">
           <a href="{{ n.href }}" style="font-size:13.5px;font-weight:500;color:#5C3D28;padding:8px 11px;border-radius:4px" style-hover="color:#9B3922">{{ n.label }}</a>
@@ -73,7 +73,7 @@
       <div style="flex:0 1 400px;min-width:280px;margin:0 auto">
         <div style="position:relative">
           <div style="position:absolute;top:14px;left:14px;right:-14px;bottom:-14px;background:#F0D98A;border-radius:6px;opacity:0.55"></div>
-          <img src="assets/artisan-illustration.png" alt="भील शिल्प परंपरा — कढ़ाई करती महिला" style="position:relative;width:100%;display:block;border-radius:6px;box-shadow:0 6px 24px rgba(74,37,16,0.16)"></img>
+          <img src="images/web/artisan-illustration.png" alt="भील शिल्प परंपरा — कढ़ाई करती महिला" style="position:relative;width:100%;display:block;border-radius:6px;box-shadow:0 6px 24px rgba(74,37,16,0.16)"></img>
         </div>
         <div style="text-align:center;font-size:12.5px;color:#8C6E57;margin-top:22px;letter-spacing:0.04em">भील शिल्प परंपरा — जीवंत विरासत</div>
       </div>
@@ -313,7 +313,7 @@
   <footer data-screen-label="Footer" style="background:#2C1A0E;color:#FAF7F0">
     <div style="max-width:1200px;margin:0 auto;padding:44px 24px 20px;display:flex;gap:36px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start">
       <div style="flex:1 1 320px">
-        <img src="assets/logo-horizontal-cream.png" alt="Bharat Ghumakkad" style="height:44px;width:auto;opacity:0.9;margin-bottom:12px"></img>
+        <img src="images/web/logo-horizontal-cream.png" alt="Bharat Ghumakkad" style="height:44px;width:auto;opacity:0.9;margin-bottom:12px"></img>
         <p style="font-size:13px;color:rgba(250,247,240,0.6);line-height:1.85;max-width:340px;margin:0">भारत घुमक्कड़ समाज दर्शन फाउंडेशन, झाबुआ<br><em style="color:rgba(250,247,240,0.45);font-size:12px">"जनजातीय ज्ञान, प्रकृति और स्वावलंबन की जीवंत यात्रा"</em></p>
       </div>
       <div style="display:flex;gap:56px;flex-wrap:wrap">
@@ -395,10 +395,10 @@ class Component extends DCLogic {
         { n: 'सत्र 6', t: 'सांस्कृतिक संध्या', photo: '', photoCap: '', items: ['स्थानीय कलाकारों द्वारा जनजातीय नृत्य, संगीत एवं प्रस्तुतियां'] },
       ] },
       { label: 'दूसरा दिन', date: '03 अगस्त 2026', sessions: [
-        { n: 'सत्र 7', t: 'ग्राम दर्शन । हलमा', photo: showPhotos ? 'assets/photo-dungar.png' : '', photoCap: 'बाबा विशिया डूंगर', items: ['योग सत्र', 'बाबा विशिया डूंगर', '5 हज़ार वृक्षारोपण सहभागिता', '2 लाख बीज रोपण', 'देव स्थान के दर्शन । गाँव वालों से संवाद', 'ट्रेकिंग'] },
+        { n: 'सत्र 7', t: 'ग्राम दर्शन । हलमा', photo: showPhotos ? 'images/web/photo-dungar.png' : '', photoCap: 'बाबा विशिया डूंगर', items: ['योग सत्र', 'बाबा विशिया डूंगर', '5 हज़ार वृक्षारोपण सहभागिता', '2 लाख बीज रोपण', 'देव स्थान के दर्शन । गाँव वालों से संवाद', 'ट्रेकिंग'] },
         { n: 'सत्र 8', t: 'ओपन संवाद', photo: '', photoCap: '', items: ['प्रतिभागियों के साथ खुली चर्चा', 'अनुभव साझा एवं सुझाव'] },
         { n: 'सत्र 9', t: 'समापन', photo: '', photoCap: '', items: ['सार', 'भविष्य की कार्ययोजना'] },
-        { n: 'सत्र 10', t: 'शोध एवं अकादमिक पहल', photo: showPhotos ? 'assets/photo-thali.png' : '', photoCap: 'झाबुआ अंचल के पारंपरिक भोजन का आनंद', items: ['विद्यार्थियों के शोध पर क्रेडिट'] },
+        { n: 'सत्र 10', t: 'शोध एवं अकादमिक पहल', photo: showPhotos ? 'images/web/photo-thali.png' : '', photoCap: 'झाबुआ अंचल के पारंपरिक भोजन का आनंद', items: ['विद्यार्थियों के शोध पर क्रेडिट'] },
       ] },
     ];
 
