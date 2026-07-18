@@ -1,43 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <title>झाबुआ संवाद — Jhabua Samvad | Bharat Ghumakkad</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&amp;family=Hind:wght@300;400;500;600;700&amp;family=Vesper+Libre:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Hind:wght@300;400;500;600;700&family=Vesper+Libre:wght@400;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #FAF7F0; -webkit-font-smoothing: antialiased; }
   a { color: #9B3922; text-decoration: none; transition: color 300ms ease; }
   a:hover { color: #C8960A; }
   ::selection { background: rgba(200,150,10,0.28); }
+  .nav-link { font-size:13.5px;font-weight:500;color:#5C3D28;padding:8px 11px;border-radius:4px; }
+  .nav-link:hover { color:#9B3922; }
+  .btn-reg-nav { margin-left:10px;background:#9B3922;color:#FAF7F0;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:0.04em;transition:background 300ms ease; }
+  .btn-reg-nav:hover { background:#6E2413;color:#FAF7F0; }
+  .btn-green { background:#3A6B45;color:#FAF7F0;padding:13px 30px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;box-shadow:0 2px 12px rgba(74,37,16,0.12);transition:all 300ms ease;display:inline-block; }
+  .btn-green:hover { background:#264D30;color:#FAF7F0;box-shadow:0 6px 24px rgba(74,37,16,0.16); }
+  .btn-outline-terra { background:transparent;color:#9B3922;border:2px solid #9B3922;padding:11px 26px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;transition:all 300ms ease;display:inline-block; }
+  .btn-outline-terra:hover { color:#6E2413;border-color:#6E2413; }
+  .btn-terra { display:inline-block;background:#9B3922;color:#FAF7F0;padding:12px 28px;border-radius:4px;font-size:14.5px;font-weight:600;letter-spacing:0.04em;transition:background 300ms ease; }
+  .btn-terra:hover { background:#6E2413;color:#FAF7F0; }
+  .btn-amber { background:#C8960A;color:#2C1A0E;padding:13px 32px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;transition:background 300ms ease;display:inline-block; }
+  .btn-amber:hover { background:#D4A830;color:#2C1A0E; }
+  .btn-outline-cream { background:transparent;color:#FAF7F0;border:2px solid rgba(250,247,240,0.5);padding:11px 26px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;transition:border 300ms ease;display:inline-block; }
+  .btn-outline-cream:hover { color:#FAF7F0;border-color:rgba(250,247,240,0.9); }
+  .theme-card { background:#FFFDF8;border-radius:6px;box-shadow:0 2px 12px rgba(74,37,16,0.12);padding:28px;transition:all 300ms ease; }
+  .theme-card:hover { transform:translateY(-2px);box-shadow:0 6px 24px rgba(74,37,16,0.16); }
+  .guest-card { background:#FFFDF8;border:1px solid rgba(74,37,16,0.12);border-radius:4px;padding:18px 20px;display:flex;gap:12px;align-items:flex-start;transition:all 300ms ease; }
+  .guest-card:hover { transform:translateY(-2px);box-shadow:0 2px 12px rgba(74,37,16,0.12); }
+  .footer-link { font-size:13px;color:rgba(250,247,240,0.65); }
+  .footer-link:hover { color:#FAF7F0; }
+  .sess-item { display:flex;gap:10px;align-items:flex-start; }
+  .sess-bullet { flex-shrink:0;width:5px;height:5px;background:#C8960A;transform:rotate(45deg);margin-top:9px; }
+  .sess-text { font-size:14.5px;color:#5C3D28;line-height:1.75; }
 </style>
-</helmet>
-
+</head>
+<body>
 <div style="min-height:100vh;background:#FAF7F0;color:#2C1A0E;font-family:'Hind','Noto Sans Devanagari',system-ui,sans-serif">
 
   <!-- NAV -->
-  <header data-screen-label="Nav" style="position:sticky;top:0;z-index:200;background:rgba(250,247,240,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(74,37,16,0.12)">
+  <header style="position:sticky;top:0;z-index:200;background:rgba(250,247,240,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(74,37,16,0.12)">
     <div style="height:3px;background:linear-gradient(90deg,#3A6B45,#C8960A,#9B3922,#3A6B45)"></div>
     <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;height:62px;flex-wrap:wrap">
-      <a href="#top" style="display:flex;align-items:center"><img src="images/web/logo-horizontal-crop.png" alt="Bharat Ghumakkad" style="height:44px;width:auto"></img></a>
+      <a href="#top" style="display:flex;align-items:center"><img src="images/web/logo-horizontal-crop.png" alt="Bharat Ghumakkad" style="height:44px;width:auto"></a>
       <nav style="display:flex;align-items:center;gap:2px;flex-wrap:wrap">
-        <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5">
-          <a href="{{ n.href }}" style="font-size:13.5px;font-weight:500;color:#5C3D28;padding:8px 11px;border-radius:4px" style-hover="color:#9B3922">{{ n.label }}</a>
-        </sc-for>
-        <a href="{{ regUrl }}" target="_blank" style="margin-left:10px;background:#9B3922;color:#FAF7F0;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:600;letter-spacing:0.04em;transition:background 300ms ease" style-hover="background:#6E2413;color:#FAF7F0">पंजीकरण करें</a>
+        <a href="#invitation" class="nav-link">निमंत्रण</a>
+        <a href="#concept" class="nav-link">परिकल्पना</a>
+        <a href="#schedule" class="nav-link">दिनचर्या</a>
+        <a href="#guests" class="nav-link">विशिष्टजन</a>
+        <a href="#participate" class="nav-link">सहभागिता</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header" target="_blank" class="btn-reg-nav">पंजीकरण करें</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
-  <section id="top" data-screen-label="Hero" style="position:relative;overflow:hidden">
+  <section id="top" style="position:relative;overflow:hidden">
     <div style="max-width:1200px;margin:0 auto;padding:72px 24px 56px;display:flex;gap:56px;align-items:center;flex-wrap:wrap">
       <div style="flex:1 1 480px;min-width:300px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
@@ -66,14 +86,14 @@
           </div>
         </div>
         <div style="display:flex;gap:14px;flex-wrap:wrap">
-          <a href="{{ regUrl }}" target="_blank" style="background:#3A6B45;color:#FAF7F0;padding:13px 30px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;box-shadow:0 2px 12px rgba(74,37,16,0.12);transition:all 300ms ease" style-hover="background:#264D30;color:#FAF7F0;box-shadow:0 6px 24px rgba(74,37,16,0.16)">पंजीकरण करें →</a>
-          <a href="#schedule" style="background:transparent;color:#9B3922;border:2px solid #9B3922;padding:11px 26px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;transition:all 300ms ease" style-hover="color:#6E2413;border:2px solid #6E2413">संवाद दिनचर्या</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header" target="_blank" class="btn-green">पंजीकरण करें →</a>
+          <a href="#schedule" class="btn-outline-terra">संवाद दिनचर्या</a>
         </div>
       </div>
       <div style="flex:0 1 400px;min-width:280px;margin:0 auto">
         <div style="position:relative">
           <div style="position:absolute;top:14px;left:14px;right:-14px;bottom:-14px;background:#F0D98A;border-radius:6px;opacity:0.55"></div>
-          <img src="images/web/artisan-illustration.png" alt="भील शिल्प परंपरा — कढ़ाई करती महिला" style="position:relative;width:100%;display:block;border-radius:6px;box-shadow:0 6px 24px rgba(74,37,16,0.16)"></img>
+          <img src="images/web/artisan-illustration.png" alt="भील शिल्प परंपरा — कढ़ाई करती महिला" style="position:relative;width:100%;display:block;border-radius:6px;box-shadow:0 6px 24px rgba(74,37,16,0.16)">
         </div>
         <div style="text-align:center;font-size:12.5px;color:#8C6E57;margin-top:22px;letter-spacing:0.04em">भील शिल्प परंपरा — जीवंत विरासत</div>
       </div>
@@ -94,7 +114,7 @@
   </section>
 
   <!-- INVITATION -->
-  <section id="invitation" data-screen-label="Invitation" style="background:#F0EAD6;padding:88px 24px">
+  <section id="invitation" style="background:#F0EAD6;padding:88px 24px">
     <div style="max-width:760px;margin:0 auto;text-align:center">
       <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">आमंत्रण पत्र</div>
       <h2 style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:clamp(30px,3.4vw,38px);font-weight:400;color:#2C1A0E;margin:0 0 34px;line-height:1.3">एक विचार, कुछ प्रश्न — और एक निमंत्रण</h2>
@@ -111,12 +131,12 @@
       </div>
       <p style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:20px;color:#2C1A0E;line-height:1.9;margin:0 0 8px">आइए… इन्हीं प्रश्नों पर मिलकर विचार करने, संवाद करने, समाधान खोजने।</p>
       <p style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:23px;color:#9B3922;margin:0 0 30px">आप सादर आमंत्रित हैं।</p>
-      <a href="{{ regUrl }}" target="_blank" style="display:inline-block;background:#9B3922;color:#FAF7F0;padding:12px 28px;border-radius:4px;font-size:14.5px;font-weight:600;letter-spacing:0.04em;transition:background 300ms ease" style-hover="background:#6E2413;color:#FAF7F0">निमंत्रण स्वीकार करें</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header" target="_blank" class="btn-terra">निमंत्रण स्वीकार करें</a>
     </div>
   </section>
 
   <!-- CONCEPT -->
-  <section id="concept" data-screen-label="Concept" style="background:#264D30;position:relative;overflow:hidden">
+  <section id="concept" style="background:#264D30;position:relative;overflow:hidden">
     <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.07;pointer-events:none">
       <defs>
         <pattern id="dotsCream" width="22" height="22" patternUnits="userSpaceOnUse">
@@ -143,51 +163,87 @@
       </div>
       <div style="text-align:center;font-size:14.5px;color:rgba(250,247,240,0.85);max-width:680px;margin:0 auto 52px;line-height:1.85"><span style="color:#D4A830;font-weight:600">समस्या —</span> आधुनिक आर्थिक और शैक्षणिक ढाँचों में साझा संवाद के संगठित मंच का अभाव। झाबुआ संवाद इसी अभाव की पूर्ति है।</div>
       <div style="display:flex;justify-content:center;align-items:stretch;gap:0;flex-wrap:wrap">
-        <sc-for list="{{ sangam }}" as="g" hint-placeholder-count="4">
-          <div style="text-align:center;padding:6px 44px;border-left:1px solid rgba(250,247,240,0.18)">
-            <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:27px;color:#FAF7F0;line-height:1.35">{{ g.hi }}</div>
-            <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D4A830;margin-top:4px">{{ g.en }}</div>
-          </div>
-        </sc-for>
+        <div style="text-align:center;padding:6px 44px;border-left:1px solid rgba(250,247,240,0.18)">
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:27px;color:#FAF7F0;line-height:1.35">संस्कृति</div>
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D4A830;margin-top:4px">Culture</div>
+        </div>
+        <div style="text-align:center;padding:6px 44px;border-left:1px solid rgba(250,247,240,0.18)">
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:27px;color:#FAF7F0;line-height:1.35">उद्यम</div>
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D4A830;margin-top:4px">Enterprise</div>
+        </div>
+        <div style="text-align:center;padding:6px 44px;border-left:1px solid rgba(250,247,240,0.18)">
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:27px;color:#FAF7F0;line-height:1.35">शोध</div>
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D4A830;margin-top:4px">Research</div>
+        </div>
+        <div style="text-align:center;padding:6px 44px;border-left:1px solid rgba(250,247,240,0.18)">
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:27px;color:#FAF7F0;line-height:1.35">युवा</div>
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#D4A830;margin-top:4px">Youth</div>
+        </div>
       </div>
       <div style="text-align:center;font-size:13px;color:rgba(250,247,240,0.6);margin-top:26px;letter-spacing:0.06em">— संस्कृति, उद्यम, शोध और युवा सहभागिता का संगम —</div>
     </div>
   </section>
 
   <!-- THEMES + GOALS -->
-  <section id="themes" data-screen-label="Themes and Goals" style="padding:88px 24px 84px">
+  <section id="themes" style="padding:88px 24px 84px">
     <div style="max-width:1200px;margin:0 auto">
       <div style="text-align:center;margin-bottom:44px">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">केंद्रीय विषय · Central Theme</div>
         <h2 style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:clamp(30px,3.4vw,38px);font-weight:400;color:#2C1A0E;margin:0;line-height:1.3">परम्परा और उद्यम — जिज्ञासा के तीन सूत्र</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:76px">
-        <sc-for list="{{ themes }}" as="t" hint-placeholder-count="3">
-          <div style="background:#FFFDF8;border-radius:6px;box-shadow:0 2px 12px rgba(74,37,16,0.12);border-top:3px solid {{ t.color }};padding:28px;transition:all 300ms ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 24px rgba(74,37,16,0.16)">
-            <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8C6E57;margin-bottom:6px">{{ t.en }}</div>
-            <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:23px;color:#4A2510;margin-bottom:12px">{{ t.hi }}</div>
-            <p style="font-size:15px;color:#5C3D28;line-height:1.85;margin:0">{{ t.q }}</p>
-          </div>
-        </sc-for>
+        <div class="theme-card" style="border-top:3px solid #3A6B45">
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8C6E57;margin-bottom:6px">Relevance</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:23px;color:#4A2510;margin-bottom:12px">प्रासंगिकता</div>
+          <p style="font-size:15px;color:#5C3D28;line-height:1.85;margin:0">जनजातीय परम्पराओं में निहित ज्ञान आधुनिक समय में कैसे प्रासंगिक हो सकता है?</p>
+        </div>
+        <div class="theme-card" style="border-top:3px solid #C8960A">
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8C6E57;margin-bottom:6px">Development</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:23px;color:#4A2510;margin-bottom:12px">विकास</div>
+          <p style="font-size:15px;color:#5C3D28;line-height:1.85;margin:0">स्थानीय संसाधनों और कौशल के आधार पर नए उद्यम कैसे विकसित किए जा सकते हैं?</p>
+        </div>
+        <div class="theme-card" style="border-top:3px solid #9B3922">
+          <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8C6E57;margin-bottom:6px">Inspiration</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:23px;color:#4A2510;margin-bottom:12px">प्रेरणा</div>
+          <p style="font-size:15px;color:#5C3D28;line-height:1.85;margin:0">युवाओं को अपने क्षेत्र में अवसर खोजने के लिए कैसे प्रेरित किया जाए?</p>
+        </div>
       </div>
       <div style="text-align:center;margin-bottom:40px">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">उद्देश्य · Five Core Goals</div>
         <h2 style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:clamp(26px,3vw,33px);font-weight:400;color:#2C1A0E;margin:0;line-height:1.3">मंच के पाँच मुख्य उद्देश्य</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px">
-        <sc-for list="{{ goals }}" as="g" hint-placeholder-count="5">
-          <div style="border-top:2px solid #F0D98A;padding-top:16px">
-            <div style="font-family:'Vesper Libre',Georgia,serif;font-size:26px;color:#C8960A;margin-bottom:6px">{{ g.n }}</div>
-            <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:18.5px;font-weight:700;color:#4A2510;margin-bottom:6px;line-height:1.4">{{ g.t }}</div>
-            <p style="font-size:13.5px;color:#5C3D28;line-height:1.75;margin:0">{{ g.d }}</p>
-          </div>
-        </sc-for>
+        <div style="border-top:2px solid #F0D98A;padding-top:16px">
+          <div style="font-family:'Vesper Libre',Georgia,serif;font-size:26px;color:#C8960A;margin-bottom:6px">01</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:18.5px;font-weight:700;color:#4A2510;margin-bottom:6px;line-height:1.4">सांस्कृतिक संवाद</div>
+          <p style="font-size:13.5px;color:#5C3D28;line-height:1.75;margin:0">परम्पराओं और कला का सम्मानपूर्वक प्रस्तुतीकरण।</p>
+        </div>
+        <div style="border-top:2px solid #F0D98A;padding-top:16px">
+          <div style="font-family:'Vesper Libre',Georgia,serif;font-size:26px;color:#C8960A;margin-bottom:6px">02</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:18.5px;font-weight:700;color:#4A2510;margin-bottom:6px;line-height:1.4">युवा सशक्तिकरण</div>
+          <p style="font-size:13.5px;color:#5C3D28;line-height:1.75;margin:0">विद्यार्थियों को विचार प्रस्तुत करने का अवसर।</p>
+        </div>
+        <div style="border-top:2px solid #F0D98A;padding-top:16px">
+          <div style="font-family:'Vesper Libre',Georgia,serif;font-size:26px;color:#C8960A;margin-bottom:6px">03</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:18.5px;font-weight:700;color:#4A2510;margin-bottom:6px;line-height:1.4">स्थानीय उद्यम</div>
+          <p style="font-size:13.5px;color:#5C3D28;line-height:1.75;margin:0">संसाधनों और परम्परागत ज्ञान पर आधारित उद्यमों को प्रोत्साहन।</p>
+        </div>
+        <div style="border-top:2px solid #F0D98A;padding-top:16px">
+          <div style="font-family:'Vesper Libre',Georgia,serif;font-size:26px;color:#C8960A;margin-bottom:6px">04</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:18.5px;font-weight:700;color:#4A2510;margin-bottom:6px;line-height:1.4">शोध और ज्ञान विनिमय</div>
+          <p style="font-size:13.5px;color:#5C3D28;line-height:1.75;margin:0">शोधकर्ताओं के लिए एक साझा मंच।</p>
+        </div>
+        <div style="border-top:2px solid #F0D98A;padding-top:16px">
+          <div style="font-family:'Vesper Libre',Georgia,serif;font-size:26px;color:#C8960A;margin-bottom:6px">05</div>
+          <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:18.5px;font-weight:700;color:#4A2510;margin-bottom:6px;line-height:1.4">सहयोगी नेटवर्क</div>
+          <p style="font-size:13.5px;color:#5C3D28;line-height:1.75;margin:0">संस्थाओं और कार्यकर्ताओं के बीच सहयोग।</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SCHEDULE -->
-  <section id="schedule" data-screen-label="Schedule" style="background:#F0EAD6;padding:88px 24px">
+  <section id="schedule" style="background:#F0EAD6;padding:88px 24px">
     <div style="max-width:1200px;margin:0 auto">
       <div style="text-align:center;margin-bottom:16px">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">समय-रेखा · Programme</div>
@@ -202,67 +258,171 @@
         <p style="font-size:15px;color:#5C3D28;margin:0 0 40px">दो दिवसीय महाआयोजन · 02–03 अगस्त 2026 · डॉ. ए पी जे अब्दुल कलाम यूआईटी, झाबुआ</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;align-items:start">
-        <sc-for list="{{ days }}" as="d" hint-placeholder-count="2">
-          <div style="background:#FFFDF8;border-radius:6px;box-shadow:0 2px 12px rgba(74,37,16,0.12);padding:34px 32px">
-            <div style="border-bottom:2px solid #F0D98A;padding-bottom:16px;margin-bottom:24px">
-              <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#3A6B45;margin-bottom:4px">{{ d.label }}</div>
-              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:26px;color:#2C1A0E">{{ d.date }}</div>
-            </div>
-            <sc-for list="{{ d.sessions }}" as="s" hint-placeholder-count="4">
-              <div style="margin-bottom:26px">
-                <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
-                  <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">{{ s.n }}</div>
-                  <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">{{ s.t }}</div>
-                </div>
-                <sc-if value="{{ s.photo }}" hint-placeholder-val="{{ false }}">
-                  <div style="margin:10px 0 12px">
-                    <img src="{{ s.photo }}" alt="{{ s.photoCap }}" style="width:100%;display:block;border-radius:4px;border:1px solid rgba(74,37,16,0.15)"></img>
-                    <div style="font-size:12px;color:#8C6E57;margin-top:6px;text-align:center;letter-spacing:0.03em">{{ s.photoCap }}</div>
-                  </div>
-                </sc-if>
-                <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
-                  <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="3">
-                    <div style="display:flex;gap:10px;align-items:flex-start">
-                      <div style="flex-shrink:0;width:5px;height:5px;background:#C8960A;transform:rotate(45deg);margin-top:9px"></div>
-                      <div style="font-size:14.5px;color:#5C3D28;line-height:1.75">{{ it }}</div>
-                    </div>
-                  </sc-for>
-                </div>
-              </div>
-            </sc-for>
+        <!-- DAY 1 -->
+        <div style="background:#FFFDF8;border-radius:6px;box-shadow:0 2px 12px rgba(74,37,16,0.12);padding:34px 32px">
+          <div style="border-bottom:2px solid #F0D98A;padding-bottom:16px;margin-bottom:24px">
+            <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#3A6B45;margin-bottom:4px">पहला दिन</div>
+            <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:26px;color:#2C1A0E">02 अगस्त 2026</div>
           </div>
-        </sc-for>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 1</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">उद्घाटन । बीज वक्तव्य</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">कार्यशाला उद्देश्य एवं दूरदर्शिता</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">जनजातीय क्षेत्र की वर्तमान स्थिति</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">जनजातीय संस्कृति की जड़ें</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">जनजातीय क्षेत्र में बदलाव की शुरुआत</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">कॉलेज एवं युवाओं की भूमिका एवं जिम्मेदारी</div></div>
+            </div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 2</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">जनजातीय अस्मिता</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">इतिहास</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">अध्यात्म</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">परंपराएं</div></div>
+            </div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 3</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">जनजातीय अस्तित्व</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">जल, जंगल, जमीन</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">सामुदायिक वन अधिकार</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">PESA (पेसा अधिनियम)</div></div>
+            </div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 4</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">विकास का दृष्टिकोण</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">एक्टिविज्म नहीं, एक्टिविटी से समाधान</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">प्रदर्शनी अवलोकन । कलात्मक गतिविधियां</div></div>
+            </div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 5</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">देश के विकास में अपनी भूमिका</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">सांस्कृतिक एवं सामाजिक दृष्टि</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">सामाजिक सहभागिता</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">साहित्य की दृष्टि से हमारी भूमिका</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 6</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">सांस्कृतिक संध्या</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">स्थानीय कलाकारों द्वारा जनजातीय नृत्य, संगीत एवं प्रस्तुतियां</div></div>
+            </div>
+          </div>
+        </div>
+        <!-- DAY 2 -->
+        <div style="background:#FFFDF8;border-radius:6px;box-shadow:0 2px 12px rgba(74,37,16,0.12);padding:34px 32px">
+          <div style="border-bottom:2px solid #F0D98A;padding-bottom:16px;margin-bottom:24px">
+            <div style="font-size:10.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#3A6B45;margin-bottom:4px">दूसरा दिन</div>
+            <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:26px;color:#2C1A0E">03 अगस्त 2026</div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 7</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">ग्राम दर्शन । हलमा</div>
+            </div>
+            <div style="margin:10px 0 12px">
+              <img src="images/web/photo-dungar.png" alt="बाबा विशिया डूंगर" style="width:100%;display:block;border-radius:4px;border:1px solid rgba(74,37,16,0.15)">
+              <div style="font-size:12px;color:#8C6E57;margin-top:6px;text-align:center;letter-spacing:0.03em">बाबा विशिया डूंगर</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">योग सत्र</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">बाबा विशिया डूंगर</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">5 हज़ार वृक्षारोपण सहभागिता</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">2 लाख बीज रोपण</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">देव स्थान के दर्शन । गाँव वालों से संवाद</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">ट्रेकिंग</div></div>
+            </div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 8</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">ओपन संवाद</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">प्रतिभागियों के साथ खुली चर्चा</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">अनुभव साझा एवं सुझाव</div></div>
+            </div>
+          </div>
+          <div style="margin-bottom:26px">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 9</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">समापन</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">सार</div></div>
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">भविष्य की कार्ययोजना</div></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:8px">
+              <div style="flex-shrink:0;background:#F0D98A;color:#4A2510;font-size:11px;font-weight:600;letter-spacing:0.08em;padding:3px 9px;border-radius:3px;white-space:nowrap">सत्र 10</div>
+              <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:19.5px;font-weight:700;color:#9B3922;line-height:1.4">शोध एवं अकादमिक पहल</div>
+            </div>
+            <div style="margin:10px 0 12px">
+              <img src="images/web/photo-thali.png" alt="झाबुआ अंचल के पारंपरिक भोजन का आनंद" style="width:100%;display:block;border-radius:4px;border:1px solid rgba(74,37,16,0.15)">
+              <div style="font-size:12px;color:#8C6E57;margin-top:6px;text-align:center;letter-spacing:0.03em">झाबुआ अंचल के पारंपरिक भोजन का आनंद</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;padding-left:6px">
+              <div class="sess-item"><div class="sess-bullet"></div><div class="sess-text">विद्यार्थियों के शोध पर क्रेडिट</div></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div style="text-align:center;font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#4A2510;margin-top:44px;letter-spacing:0.02em">संवाद से समाधान · सहयोग से परिवर्तन · जनजातीय अस्मिता — हमारी पहचान</div>
     </div>
   </section>
 
   <!-- GUESTS -->
-  <sc-if value="{{ showGuests }}" hint-placeholder-val="{{ true }}">
-    <section id="guests" data-screen-label="Guests" style="padding:88px 24px">
-      <div style="max-width:1200px;margin:0 auto">
-        <div style="text-align:center;margin-bottom:44px">
-          <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">मुख्य अतिथि · Distinguished Guests</div>
-          <h2 style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:clamp(30px,3.4vw,38px);font-weight:400;color:#2C1A0E;margin:0;line-height:1.3">इस महाआयोजन में सम्मिलित विशिष्टजन</h2>
-          <p style="font-size:15px;color:#5C3D28;margin:12px 0 0">देश के प्रमुख विद्वान, सामाजिक कार्यकर्ता और शिक्षाविद</p>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px">
-          <sc-for list="{{ guests }}" as="p" hint-placeholder-count="6">
-            <div style="background:#FFFDF8;border:1px solid rgba(74,37,16,0.12);border-radius:4px;padding:18px 20px;display:flex;gap:12px;align-items:flex-start;transition:all 300ms ease" style-hover="transform:translateY(-2px);box-shadow:0 2px 12px rgba(74,37,16,0.12)">
-              <div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div>
-              <div>
-                <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">{{ p.name }}</div>
-                <div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">{{ p.role }}</div>
-              </div>
-            </div>
-          </sc-for>
-        </div>
+  <section id="guests" style="padding:88px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:44px">
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">मुख्य अतिथि · Distinguished Guests</div>
+        <h2 style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:clamp(30px,3.4vw,38px);font-weight:400;color:#2C1A0E;margin:0;line-height:1.3">इस महाआयोजन में सम्मिलित विशिष्टजन</h2>
+        <p style="font-size:15px;color:#5C3D28;margin:12px 0 0">देश के प्रमुख विद्वान, सामाजिक कार्यकर्ता और शिक्षाविद</p>
       </div>
-    </section>
-  </sc-if>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px">
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">प्रो. मधुकर एस पाड़वी</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">कुलपति, बिरसा मुंडा ट्राइबल यूनिवर्सिटी, राजपीपला (गुजरात)</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">प्रो. एस.सी. चौबे</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">कुलपति, राजीव गांधी प्रौद्योगिकी विश्वविद्यालय, भोपाल</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">प्रो. राकेश सिंघई</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">कुलपति, देवी अहिल्या विश्वविद्यालय, इंदौर (म.प्र.)</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री अशोक अधिकारी</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">Youth For Seva, इंदौर</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">प्रो. सखाराम मुजाल्दे</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">DAVV, School of Tribal Studies</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री पद्मश्री चेतराम जी पंवार</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">पर्यावरण अभ्यास केंद्र, बारिपाड़ा, महाराष्ट्र</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री अभय जी वानखेड़े</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">मानव चेतना केंद्र, इंदौर</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री राजाराम जी कटारा</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">सामाजिक कार्यकर्ता, शिवगंगा समग्र ग्रामविकास परिषद, झाबुआ</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">डॉ. अर्जुन जी पारगी</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">भील संतरामपुर, गुजरात</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री रूपसिंह जी</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">जनजातीय विकास मोर्चा</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">डॉ. शोरभ मारू</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">सह प्राध्यापक, फार्मकोलोजी विभाग, सिरपुर (म.ह.)</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री संतोष जी टैगोर</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">अपर कलेक्टर, उज्जैन</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्री जयशंकर जी</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">विश्व संवाद केंद्र, मालवा</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">श्रीमती जया जैन जी</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">महुवा वन संस्था, इंदौर</div></div></div>
+        <div class="guest-card"><div style="flex-shrink:0;width:7px;height:7px;background:#3A6B45;transform:rotate(45deg);margin-top:9px"></div><div><div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:17.5px;color:#2C1A0E;line-height:1.45">डॉ. उमेश बनौधा</div><div style="font-size:13px;color:#8C6E57;line-height:1.6;margin-top:2px">डॉ. ए पी जे अब्दुल कलाम यूआईटी, झाबुआ (म.प्र.)</div></div></div>
+      </div>
+    </div>
+  </section>
 
   <!-- PARTICIPATION -->
-  <section id="participate" data-screen-label="Participation" style="padding:12px 24px 92px">
+  <section id="participate" style="padding:12px 24px 92px">
     <div style="max-width:1200px;margin:0 auto">
       <div style="text-align:center;margin-bottom:44px">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9B3922;margin-bottom:10px">सहभागिता · Participation</div>
@@ -270,25 +430,25 @@
         <p style="font-size:15px;color:#5C3D28;margin:12px 0 0">विविध आवाज़ें — एक साझा मंच</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:52px">
-        <sc-for list="{{ participants }}" as="p" hint-placeholder-count="6">
-          <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px">
-            <div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div>
-            <div style="font-size:15px;font-weight:600;color:#2C1A0E">{{ p }}</div>
-          </div>
-        </sc-for>
+        <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px"><div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div><div style="font-size:15px;font-weight:600;color:#2C1A0E">विश्वविद्यालय और कॉलेज के विद्यार्थी</div></div>
+        <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px"><div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div><div style="font-size:15px;font-weight:600;color:#2C1A0E">स्कूल के विद्यार्थी</div></div>
+        <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px"><div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div><div style="font-size:15px;font-weight:600;color:#2C1A0E">शोधकर्ता और शिक्षाविद</div></div>
+        <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px"><div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div><div style="font-size:15px;font-weight:600;color:#2C1A0E">सामाजिक संस्थाओं के प्रतिनिधि</div></div>
+        <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px"><div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div><div style="font-size:15px;font-weight:600;color:#2C1A0E">स्थानीय उद्यमी</div></div>
+        <div style="background:#F0EAD6;border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:12px"><div style="flex-shrink:0;width:7px;height:7px;background:#9B3922;transform:rotate(45deg)"></div><div style="font-size:15px;font-weight:600;color:#2C1A0E">कलाकार और सांस्कृतिक समूह</div></div>
       </div>
       <div style="border:1px solid rgba(74,37,16,0.15);border-radius:6px;padding:30px 32px;display:flex;gap:32px;flex-wrap:wrap;align-items:center;justify-content:space-between">
         <div style="flex:1 1 380px">
           <div style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:21px;color:#4A2510;margin-bottom:6px">साझेदारी के अवसर</div>
           <p style="font-size:14px;color:#5C3D28;line-height:1.8;margin:0">तकनीकी सहायता · प्रायोजन · प्रतिभागिता — विश्वविद्यालय, सामाजिक संस्थाएँ, शोध संस्थान, सांस्कृतिक संगठन एवं स्थानीय प्रशासन सभी का स्वागत है।</p>
         </div>
-        <a href="{{ pdfUrl }}" target="_blank" style="background:transparent;color:#9B3922;border:2px solid #9B3922;padding:11px 24px;border-radius:4px;font-size:14px;font-weight:600;letter-spacing:0.04em;white-space:nowrap;transition:all 300ms ease" style-hover="color:#6E2413;border:2px solid #6E2413">विस्तृत रूपरेखा (PDF) ↓</a>
+        <a href="https://www.bharatghumakkad.org/Jhabua_Samvad_Presentation.pdf" target="_blank" class="btn-outline-terra" style="font-size:14px;padding:11px 24px;white-space:nowrap">विस्तृत रूपरेखा (PDF) ↓</a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section data-screen-label="Register CTA" style="background:#4A2510;position:relative;overflow:hidden">
+  <section style="background:#4A2510;position:relative;overflow:hidden">
     <svg width="100%" height="20" preserveAspectRatio="none" style="display:block">
       <defs>
         <pattern id="zz2" width="30" height="20" patternUnits="userSpaceOnUse">
@@ -303,36 +463,36 @@
       <h2 style="font-family:'Tiro Devanagari Hindi',Georgia,serif;font-size:clamp(32px,4vw,42px);font-weight:400;color:#FAF7F0;margin:0 0 16px;line-height:1.3">आइए, इस संवाद का हिस्सा बनें</h2>
       <p style="font-size:15.5px;color:rgba(250,247,240,0.75);line-height:1.9;max-width:600px;margin:0 auto 34px">दीर्घकालिक दृष्टि — जनजातीय विषयों पर एक स्थायी संवाद मंच, युवाओं के लिए निरंतर अवसर, संस्थाओं में दीर्घकालिक सहयोग, और शोध-उद्यम-संस्कृति का एक जीवंत केंद्र।</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a href="{{ regUrl }}" target="_blank" style="background:#C8960A;color:#2C1A0E;padding:13px 32px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;transition:background 300ms ease" style-hover="background:#D4A830;color:#2C1A0E">पंजीकरण करें →</a>
-        <a href="{{ pdfUrl }}" target="_blank" style="background:transparent;color:#FAF7F0;border:2px solid rgba(250,247,240,0.5);padding:11px 26px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:0.04em;transition:border 300ms ease" style-hover="color:#FAF7F0;border:2px solid rgba(250,247,240,0.9)">रूपरेखा देखें</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header" target="_blank" class="btn-amber">पंजीकरण करें →</a>
+        <a href="https://www.bharatghumakkad.org/Jhabua_Samvad_Presentation.pdf" target="_blank" class="btn-outline-cream">रूपरेखा देखें</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer data-screen-label="Footer" style="background:#2C1A0E;color:#FAF7F0">
+  <footer style="background:#2C1A0E;color:#FAF7F0">
     <div style="max-width:1200px;margin:0 auto;padding:44px 24px 20px;display:flex;gap:36px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start">
       <div style="flex:1 1 320px">
-        <img src="images/web/logo-horizontal-cream.png" alt="Bharat Ghumakkad" style="height:44px;width:auto;opacity:0.9;margin-bottom:12px"></img>
+        <img src="images/web/logo-horizontal-cream.png" alt="Bharat Ghumakkad" style="height:44px;width:auto;opacity:0.9;margin-bottom:12px">
         <p style="font-size:13px;color:rgba(250,247,240,0.6);line-height:1.85;max-width:340px;margin:0">भारत घुमक्कड़ समाज दर्शन फाउंडेशन, झाबुआ<br><em style="color:rgba(250,247,240,0.45);font-size:12px">"जनजातीय ज्ञान, प्रकृति और स्वावलंबन की जीवंत यात्रा"</em></p>
       </div>
       <div style="display:flex;gap:56px;flex-wrap:wrap">
         <div>
           <div style="font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#C8960A;margin-bottom:12px">कार्यक्रम</div>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <a href="#invitation" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">निमंत्रण</a>
-            <a href="#schedule" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">संवाद दिनचर्या</a>
-            <a href="{{ regUrl }}" target="_blank" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">पंजीकरण</a>
-            <a href="{{ pdfUrl }}" target="_blank" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">प्रस्तुति (PDF)</a>
+            <a href="#invitation" class="footer-link">निमंत्रण</a>
+            <a href="#schedule" class="footer-link">संवाद दिनचर्या</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header" target="_blank" class="footer-link">पंजीकरण</a>
+            <a href="https://www.bharatghumakkad.org/Jhabua_Samvad_Presentation.pdf" target="_blank" class="footer-link">प्रस्तुति (PDF)</a>
           </div>
         </div>
         <div>
           <div style="font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#C8960A;margin-bottom:12px">संपर्क</div>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <a href="https://www.bharatghumakkad.org" target="_blank" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">bharatghumakkad.org</a>
-            <a href="https://www.instagram.com/bharat_ghumkkad_jhabua?igsh=bGFyemF5Yzk5cmly&amp;utm_source=qr" target="_blank" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61575201462354&amp;mibextid=ZbWKwL" target="_blank" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">Facebook</a>
-            <a href="https://youtube.com/@rajendradindod01?si=5iSqOUTHFV6mYzJO" target="_blank" style="font-size:13px;color:rgba(250,247,240,0.65)" style-hover="color:#FAF7F0">YouTube</a>
+            <a href="https://www.bharatghumakkad.org" target="_blank" class="footer-link">bharatghumakkad.org</a>
+            <a href="https://www.instagram.com/bharat_ghumkkad_jhabua?igsh=bGFyemF5Yzk5cmly&utm_source=qr" target="_blank" class="footer-link">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61575201462354&mibextid=ZbWKwL" target="_blank" class="footer-link">Facebook</a>
+            <a href="https://youtube.com/@rajendradindod01?si=5iSqOUTHFV6mYzJO" target="_blank" class="footer-link">YouTube</a>
           </div>
         </div>
       </div>
@@ -343,95 +503,5 @@
     </div>
   </footer>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{
-  &quot;registrationUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Content&quot; },
-  &quot;showGuests&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot; },
-  &quot;showSchedulePhotos&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot; }
-}">
-class Component extends DCLogic {
-  renderVals() {
-    const regUrl = this.props.registrationUrl ?? 'https://docs.google.com/forms/d/e/1FAIpQLSfFJVX0taA3g3oOoghozBLB-edqiZZhZYDx6mNwcb4LndIXVg/viewform?usp=header';
-    const pdfUrl = 'https://www.bharatghumakkad.org/Jhabua_Samvad_Presentation.pdf';
-    const showGuests = this.props.showGuests ?? true;
-    const showPhotos = this.props.showSchedulePhotos ?? true;
-
-    const navItems = [
-      { label: 'निमंत्रण', href: '#invitation' },
-      { label: 'परिकल्पना', href: '#concept' },
-      { label: 'दिनचर्या', href: '#schedule' },
-      { label: 'विशिष्टजन', href: '#guests' },
-      { label: 'सहभागिता', href: '#participate' },
-    ];
-
-    const sangam = [
-      { hi: 'संस्कृति', en: 'Culture' },
-      { hi: 'उद्यम', en: 'Enterprise' },
-      { hi: 'शोध', en: 'Research' },
-      { hi: 'युवा', en: 'Youth' },
-    ];
-
-    const themes = [
-      { hi: 'प्रासंगिकता', en: 'Relevance', color: '#3A6B45', q: 'जनजातीय परम्पराओं में निहित ज्ञान आधुनिक समय में कैसे प्रासंगिक हो सकता है?' },
-      { hi: 'विकास', en: 'Development', color: '#C8960A', q: 'स्थानीय संसाधनों और कौशल के आधार पर नए उद्यम कैसे विकसित किए जा सकते हैं?' },
-      { hi: 'प्रेरणा', en: 'Inspiration', color: '#9B3922', q: 'युवाओं को अपने क्षेत्र में अवसर खोजने के लिए कैसे प्रेरित किया जाए?' },
-    ];
-
-    const goals = [
-      { n: '01', t: 'सांस्कृतिक संवाद', d: 'परम्पराओं और कला का सम्मानपूर्वक प्रस्तुतीकरण।' },
-      { n: '02', t: 'युवा सशक्तिकरण', d: 'विद्यार्थियों को विचार प्रस्तुत करने का अवसर।' },
-      { n: '03', t: 'स्थानीय उद्यम', d: 'संसाधनों और परम्परागत ज्ञान पर आधारित उद्यमों को प्रोत्साहन।' },
-      { n: '04', t: 'शोध और ज्ञान विनिमय', d: 'शोधकर्ताओं के लिए एक साझा मंच।' },
-      { n: '05', t: 'सहयोगी नेटवर्क', d: 'संस्थाओं और कार्यकर्ताओं के बीच सहयोग।' },
-    ];
-
-    const days = [
-      { label: 'पहला दिन', date: '02 अगस्त 2026', sessions: [
-        { n: 'सत्र 1', t: 'उद्घाटन । बीज वक्तव्य', photo: '', photoCap: '', items: ['कार्यशाला उद्देश्य एवं दूरदर्शिता', 'जनजातीय क्षेत्र की वर्तमान स्थिति', 'जनजातीय संस्कृति की जड़ें', 'जनजातीय क्षेत्र में बदलाव की शुरुआत', 'कॉलेज एवं युवाओं की भूमिका एवं जिम्मेदारी'] },
-        { n: 'सत्र 2', t: 'जनजातीय अस्मिता', photo: '', photoCap: '', items: ['इतिहास', 'अध्यात्म', 'परंपराएं'] },
-        { n: 'सत्र 3', t: 'जनजातीय अस्तित्व', photo: '', photoCap: '', items: ['जल, जंगल, जमीन', 'सामुदायिक वन अधिकार', 'PESA (पेसा अधिनियम)'] },
-        { n: 'सत्र 4', t: 'विकास का दृष्टिकोण', photo: '', photoCap: '', items: ['एक्टिविज्म नहीं, एक्टिविटी से समाधान', 'प्रदर्शनी अवलोकन । कलात्मक गतिविधियां'] },
-        { n: 'सत्र 5', t: 'देश के विकास में अपनी भूमिका', photo: '', photoCap: '', items: ['सांस्कृतिक एवं सामाजिक दृष्टि', 'सामाजिक सहभागिता', 'साहित्य की दृष्टि से हमारी भूमिका'] },
-        { n: 'सत्र 6', t: 'सांस्कृतिक संध्या', photo: '', photoCap: '', items: ['स्थानीय कलाकारों द्वारा जनजातीय नृत्य, संगीत एवं प्रस्तुतियां'] },
-      ] },
-      { label: 'दूसरा दिन', date: '03 अगस्त 2026', sessions: [
-        { n: 'सत्र 7', t: 'ग्राम दर्शन । हलमा', photo: showPhotos ? 'images/web/photo-dungar.png' : '', photoCap: 'बाबा विशिया डूंगर', items: ['योग सत्र', 'बाबा विशिया डूंगर', '5 हज़ार वृक्षारोपण सहभागिता', '2 लाख बीज रोपण', 'देव स्थान के दर्शन । गाँव वालों से संवाद', 'ट्रेकिंग'] },
-        { n: 'सत्र 8', t: 'ओपन संवाद', photo: '', photoCap: '', items: ['प्रतिभागियों के साथ खुली चर्चा', 'अनुभव साझा एवं सुझाव'] },
-        { n: 'सत्र 9', t: 'समापन', photo: '', photoCap: '', items: ['सार', 'भविष्य की कार्ययोजना'] },
-        { n: 'सत्र 10', t: 'शोध एवं अकादमिक पहल', photo: showPhotos ? 'images/web/photo-thali.png' : '', photoCap: 'झाबुआ अंचल के पारंपरिक भोजन का आनंद', items: ['विद्यार्थियों के शोध पर क्रेडिट'] },
-      ] },
-    ];
-
-    const guests = [
-      { name: 'प्रो. मधुकर एस पाड़वी', role: 'कुलपति, बिरसा मुंडा ट्राइबल यूनिवर्सिटी, राजपीपला (गुजरात)' },
-      { name: 'प्रो. एस.सी. चौबे', role: 'कुलपति, राजीव गांधी प्रौद्योगिकी विश्वविद्यालय, भोपाल' },
-      { name: 'प्रो. राकेश सिंघई', role: 'कुलपति, देवी अहिल्या विश्वविद्यालय, इंदौर (म.प्र.)' },
-      { name: 'श्री अशोक अधिकारी', role: 'Youth For Seva, इंदौर' },
-      { name: 'प्रो. सखाराम मुजाल्दे', role: 'DAVV, School of Tribal Studies' },
-      { name: 'श्री पद्मश्री चेतराम जी पंवार', role: 'पर्यावरण अभ्यास केंद्र, बारिपाड़ा, महाराष्ट्र' },
-      { name: 'श्री अभय जी वानखेड़े', role: 'मानव चेतना केंद्र, इंदौर' },
-      { name: 'श्री राजाराम जी कटारा', role: 'सामाजिक कार्यकर्ता, शिवगंगा समग्र ग्रामविकास परिषद, झाबुआ' },
-      { name: 'डॉ. अर्जुन जी पारगी', role: 'भील संतरामपुर, गुजरात' },
-      { name: 'श्री रूपसिंह जी', role: 'जनजातीय विकास मोर्चा' },
-      { name: 'डॉ. शोरभ मारू', role: 'सह प्राध्यापक, फार्मकोलोजी विभाग, सिरपुर (म.ह.)' },
-      { name: 'श्री संतोष जी टैगोर', role: 'अपर कलेक्टर, उज्जैन' },
-      { name: 'श्री जयशंकर जी', role: 'विश्व संवाद केंद्र, मालवा' },
-      { name: 'श्रीमती जया जैन जी', role: 'महुवा वन संस्था, इंदौर' },
-      { name: 'डॉ. उमेश बनौधा', role: 'डॉ. ए पी जे अब्दुल कलाम यूआईटी, झाबुआ (म.प्र.)' },
-    ];
-
-    const participants = [
-      'विश्वविद्यालय और कॉलेज के विद्यार्थी',
-      'स्कूल के विद्यार्थी',
-      'शोधकर्ता और शिक्षाविद',
-      'सामाजिक संस्थाओं के प्रतिनिधि',
-      'स्थानीय उद्यमी',
-      'कलाकार और सांस्कृतिक समूह',
-    ];
-
-    return { regUrl, pdfUrl, showGuests, navItems, sangam, themes, goals, days, guests, participants };
-  }
-}
-</script>
 </body>
 </html>
